@@ -1,6 +1,6 @@
 # Changes
 
-All jars are in `C:\Users\Kaloyan K\Plugins` (this folder). Nothing in `server\plugins` was touched; copy what you want yourself.
+All jars are in `your Plugins folder` (this folder). Nothing in `server\plugins` was touched; copy what you want yourself.
 Every project below builds with `-Xlint:all -Werror` and its unit tests pass. Throwaway Paper servers (never yours) were used for
 the real-server tests.
 

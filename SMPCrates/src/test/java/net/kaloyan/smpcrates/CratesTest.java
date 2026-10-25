@@ -328,19 +328,19 @@ class CratesTest {
 
     @Test
     void onlyTheNamedOwnerWithThePermissionMayUseKeyall() {
-        assertTrue(KeyallCommand.mayUse(true, false, "CONSOLE", List.of("Kaloyan")), "the console always may");
-        assertFalse(KeyallCommand.mayUse(false, false, "Kaloyan", List.of()), "no permission, no keyall, even for an operator");
-        assertTrue(KeyallCommand.mayUse(false, true, "Kaloyan", List.of()), "permission and no allow-list");
-        assertTrue(KeyallCommand.mayUse(false, true, "kaloyan", List.of("Kaloyan")), "names are not case sensitive");
-        assertFalse(KeyallCommand.mayUse(false, true, "Someone", List.of("Kaloyan")), "permission is not enough with an allow-list");
+        assertTrue(KeyallCommand.mayUse(true, false, "CONSOLE", List.of("Steve")), "the console always may");
+        assertFalse(KeyallCommand.mayUse(false, false, "Steve", List.of()), "no permission, no keyall, even for an operator");
+        assertTrue(KeyallCommand.mayUse(false, true, "Steve", List.of()), "permission and no allow-list");
+        assertTrue(KeyallCommand.mayUse(false, true, "steve", List.of("Steve")), "names are not case sensitive");
+        assertFalse(KeyallCommand.mayUse(false, true, "Someone", List.of("Steve")), "permission is not enough with an allow-list");
     }
 
     @Test
     void theAllowListMustHoldRealPlayerNames() throws Exception {
         YamlConfiguration yaml = shipped();
         assertTrue(CratesSettings.parse(yaml).keyallAllowed().isEmpty());
-        yaml.set("keyall.allowed-players", List.of("Kaloyan_K"));
-        assertEquals(List.of("Kaloyan_K"), CratesSettings.parse(yaml).keyallAllowed());
+        yaml.set("keyall.allowed-players", List.of("Steve_K"));
+        assertEquals(List.of("Steve_K"), CratesSettings.parse(yaml).keyallAllowed());
         yaml.set("keyall.allowed-players", List.of("not a name!"));
         assertThrows(CratesSettings.Invalid.class, () -> CratesSettings.parse(yaml));
     }

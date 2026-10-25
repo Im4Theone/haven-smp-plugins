@@ -36,7 +36,7 @@ class MessageListenerTest {
                 .withFarewell("<gray>Bye <player>"));
         listener = new MessageListener(manager);
         player = mock(Player.class);
-        when(player.getName()).thenReturn("Kaloyan");
+        when(player.getName()).thenReturn("Steve");
     }
 
     private void move(int fx, int tx) {
