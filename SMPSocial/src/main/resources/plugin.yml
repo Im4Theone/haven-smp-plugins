@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpsocial.SMPSocialPlugin
 api-version: '1.21.11'
 description: Private messages, /reply, /ignore, /trash and /afk.
-authors: [Kaloyan]
+authors: [im4theone]
 commands:
   msg:
     description: Send a private message.

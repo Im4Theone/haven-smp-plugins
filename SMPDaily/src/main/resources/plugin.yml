@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpdaily.SMPDailyPlugin
 api-version: '1.21.11'
 description: A daily reward with a 7-day streak.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [Vault, SMP-VaultBridge]
 softdepend: [SMP-Crates, SMP-Shop]
 commands:

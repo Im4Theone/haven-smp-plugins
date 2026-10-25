@@ -1,4 +1,4 @@
-# SMP-Catch 1.0.0 (author: Kaloyan)
+# SMP-Catch 1.0.0 (author: im4theone)
 
 Catches x-ray cheaters, plus staff vanish and freeze. Paper 1.21.11, Java 21.
 

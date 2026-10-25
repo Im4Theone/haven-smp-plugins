@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpshop.SMPShopPlugin
 api-version: '1.21.11'
 description: Items for money, keys and spawners for Shards.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [Vault, SMP-VaultBridge]
 softdepend: [SMP-Crates, SMP-Spawners]
 commands:

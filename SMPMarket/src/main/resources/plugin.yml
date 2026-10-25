@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpmarket.SMPMarket
 api-version: '1.21.11'
 description: Player auction house for the SMP - command-driven listings with crash-recoverable purchases and item delivery.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [SMP-Core, SMP-Economy]
 
 # Commands are registered through Paper's Brigadier lifecycle API (see MarketCommands),

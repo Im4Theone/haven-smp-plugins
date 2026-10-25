@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smprtp.SMPRtpPlugin
 api-version: '1.21.11'
 description: Random teleport in the overworld, the nether and the end.
-authors: [Kaloyan]
+authors: [im4theone]
 softdepend: [Vault, SMP-VaultBridge, SMP-Protect]
 commands:
   rtp:

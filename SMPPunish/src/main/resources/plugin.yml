@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smppunish.SMPPunishPlugin
 api-version: '1.21.11'
 description: Custom kicks, bans, mutes and warnings with screens, presets and a record for every player.
-authors: [Kaloyan]
+authors: [im4theone]
 commands:
   ban:
     permission: smppunish.ban

@@ -158,7 +158,7 @@ default hub; the previous hub is still there (`source: bundled-v2`).
 ## Questions for you
 - Totem of undying price is not on your price sheet (kept at 1250).
 
-## Rewrite of downloaded plugins (author: Kaloyan)
+## Rewrite of downloaded plugins (author: im4theone)
 The downloaded plugins are replaced by original code, not relabelled. Order: Spawners, Shop (+Shards), Orders, Auction.
 - **SMP-Spawners 1.0.0 (done)**: replaces ISpawners. Same config keys, `spawners.yml` format and item tag, and the
   `/ispawners` alias, so data and SMP-Crates rewards carry over. 15 unit tests + 12 mocked listener tests + a boot test on a

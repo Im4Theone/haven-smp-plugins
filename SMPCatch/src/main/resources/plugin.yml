@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpcatch.SMPCatchPlugin
 api-version: '1.21.11'
 description: X-ray honeypots, mining statistics, staff vanish and freeze.
-authors: [Kaloyan]
+authors: [im4theone]
 commands:
   trap:
     permission: smpcatch.admin

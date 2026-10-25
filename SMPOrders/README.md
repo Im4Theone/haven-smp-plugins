@@ -1,4 +1,4 @@
-# SMP-Orders 1.0.0 (author: Kaloyan)
+# SMP-Orders 1.0.0 (author: im4theone)
 
 Original buy-order marketplace for Paper 1.21.11 (Java 21). Replaces the downloaded DonutOrders.
 

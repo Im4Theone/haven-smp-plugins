@@ -1,4 +1,4 @@
-# SMP-Shop 1.0.0 (author: Kaloyan)
+# SMP-Shop 1.0.0 (author: im4theone)
 
 Original shop for Paper 1.21.11 (Java 21). Replaces the downloaded DonutShop.
 

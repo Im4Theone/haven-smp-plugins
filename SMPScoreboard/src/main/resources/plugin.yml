@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpscoreboard.SMPScoreboard
 api-version: '1.21.11'
 description: Sidebar with money, shards, kills, deaths, streak, rank, playtime and ping, plus LuckPerms chat prefixes.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [SMP-Core, SMP-Economy]
 softdepend: [LuckPerms, SMP-Shop, DonutShop, SMP-Catch]
 

@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpinfo.SMPInfoPlugin
 api-version: '1.21.11'
 description: Join and quit messages, server list text, announcer and info commands.
-authors: [Kaloyan]
+authors: [im4theone]
 softdepend: [Vault, LuckPerms]
 commands:
   ranks:

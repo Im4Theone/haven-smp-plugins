@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpstats.SMPStatsPlugin
 api-version: '1.21.11'
 description: Kills, deaths, playtime and more, with leaderboards.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [SMP-Core, SMP-Economy]
 softdepend: [SMP-Shop]
 commands:

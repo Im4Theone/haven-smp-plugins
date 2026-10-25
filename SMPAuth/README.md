@@ -1,4 +1,4 @@
-# SMP-Auth 1.0.0 (author: Kaloyan)
+# SMP-Auth 1.0.0 (author: im4theone)
 Players WITHOUT a bought account register and log in; players WITH one walk in. Paper 1.21.11, Java 21.
 
 ## Setting up (important)

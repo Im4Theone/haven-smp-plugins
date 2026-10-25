@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpeconomy.SMPEconomy
 api-version: '1.21.11'
 description: Economy for the SMP - UUID-keyed balances in SQLite, /balance, /pay, /eco and a public service API.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [SMP-Core]
 
 # Commands are registered through Paper's Brigadier lifecycle API (see EconomyCommands),

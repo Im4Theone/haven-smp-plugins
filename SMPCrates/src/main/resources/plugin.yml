@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpcrates.SMPCratesPlugin
 api-version: '1.21.11'
 description: Crates - a free one for everybody every hour, crates from the shop, menu, preview and opening animation.
-authors: [Kaloyan]
+authors: [im4theone]
 softdepend: [Vault, SMP-VaultBridge, DonutShop, SMP-Shop, SMP-Spawners, ISpawners, SMP-Drill]
 commands:
   crates:

@@ -1,4 +1,4 @@
-# SMP-Kits 1.0.0 (author: Kaloyan)
+# SMP-Kits 1.0.0 (author: im4theone)
 
 One kit per rank for Paper 1.21.11. Guardian (admin) gets none; the Founder plays and gets all kits.
 

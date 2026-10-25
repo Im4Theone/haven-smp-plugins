@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpcore.SMPCore
 api-version: '1.21.11'
 description: Foundation plugin for the SMP - shared API, service registry and configuration.
-authors: [Kaloyan]
+authors: [im4theone]
 
 # Commands are registered through Paper's Brigadier lifecycle API (see SmpCoreCommand),
 # so there is intentionally no "commands:" section here.

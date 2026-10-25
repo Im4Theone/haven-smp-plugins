@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpspawners.SMPSpawnersPlugin
 api-version: '1.21.11'
 description: Stackable spawners that store loot and experience, with a menu to collect and sell.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [Vault, SMP-VaultBridge]
 loadbefore: [SMP-Crates, DonutShop, SMP-Shop]
 commands:

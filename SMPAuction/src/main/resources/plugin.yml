@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpauction.SMPAuctionPlugin
 api-version: '1.21.11'
 description: Auction house with Buy It Now, bidding, a collection box and history.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [Vault, SMP-VaultBridge]
 commands:
   ah:

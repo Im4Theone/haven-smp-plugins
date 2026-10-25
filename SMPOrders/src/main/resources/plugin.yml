@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smporders.SMPOrdersPlugin
 api-version: '1.21.11'
 description: A buy-order marketplace with escrow.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [Vault, SMP-VaultBridge]
 commands:
   order:

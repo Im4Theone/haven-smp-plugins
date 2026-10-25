@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpbounty.SMPBountyPlugin
 api-version: '1.21.11'
 description: Put money on a player's head; the killer collects it.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [Vault, SMP-VaultBridge]
 commands:
   bounty:

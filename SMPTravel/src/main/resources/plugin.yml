@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smptravel.SMPTravelPlugin
 api-version: '1.21.11'
 description: Spawn and hub, homes, teleport requests and /back, with a stand-still warm-up.
-authors: [Kaloyan]
+authors: [im4theone]
 commands:
   spawn:
     description: Teleport to the survival spawn.

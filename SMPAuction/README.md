@@ -1,4 +1,4 @@
-# SMP-Auction 1.0.0 (author: Kaloyan)
+# SMP-Auction 1.0.0 (author: im4theone)
 
 Original auction house for Paper 1.21.11 (Java 21). Replaces the downloaded DonutAuctionHouse.
 

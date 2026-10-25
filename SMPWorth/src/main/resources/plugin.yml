@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpworth.SMPWorthPlugin
 api-version: '1.21.11'
 description: Adds "Worth - price" to the lore of every item, from a price sheet with a value per enchantment level.
-authors: [Kaloyan]
+authors: [im4theone]
 softdepend: [Vault, SMP-VaultBridge]
 commands:
   sell:

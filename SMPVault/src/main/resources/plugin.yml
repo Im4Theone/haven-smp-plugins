@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpvault.SMPVaultBridge
 api-version: '1.21.11'
 description: Registers SMP-Economy as the Vault economy so Vault-based plugins use SMP-Economy balances.
-authors: [Kaloyan]
+authors: [im4theone]
 depend: [SMP-Core, SMP-Economy, Vault]
 # Vault consumers must find the economy when they enable.
 loadbefore: [DonutOrders, DonutShop, SMP-Market, SMP-Orders, SMP-Shop, SMP-Auction, SMP-Spawners]

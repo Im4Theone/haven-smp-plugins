@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpauth.SMPAuthPlugin
 api-version: '1.21.11'
 description: Register and login for players without a bought account; bought accounts are verified with Mojang and walk in.
-authors: [Kaloyan]
+authors: [im4theone]
 softdepend: [FastLogin]
 load: STARTUP
 commands:

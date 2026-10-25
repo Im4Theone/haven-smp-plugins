@@ -1,4 +1,4 @@
-# SMP-Punish 1.0.0 (author: Kaloyan)
+# SMP-Punish 1.0.0 (author: im4theone)
 
 Custom kicks, bans, mutes and warnings for Paper 1.21.11 (Java 21). The ban and kick screens, every announcement and the reason
 shortcuts are in `config.yml` (MiniMessage). Replaces the vanilla `/ban`, `/kick` and `/pardon`.

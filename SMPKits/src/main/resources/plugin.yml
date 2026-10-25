@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpkits.SMPKitsPlugin
 api-version: '1.21.11'
 description: One kit per rank (the Founder plays too). The admin rank gets no kits.
-authors: [Kaloyan]
+authors: [im4theone]
 softdepend: [Vault, LuckPerms]
 commands:
   kit:

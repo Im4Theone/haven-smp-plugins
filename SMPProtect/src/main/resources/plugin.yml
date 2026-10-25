@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpprotect.SMPProtectPlugin
 api-version: '1.21.11'
 description: Protects areas of the server with regions and flags (no building, no PvP, no mob spawning...). Hub first.
-authors: [Kaloyan]
+authors: [im4theone]
 commands:
   protect:
     permission: smpprotect.admin

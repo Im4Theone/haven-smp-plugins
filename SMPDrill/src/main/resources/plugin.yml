@@ -3,7 +3,7 @@ version: '${version}'
 main: net.kaloyan.smpdrill.SMPDrillPlugin
 api-version: '1.21.11'
 description: The Amethyst Drill - a maxed netherite pickaxe that mines a 5x5 tunnel with every swing.
-authors: [Kaloyan]
+authors: [im4theone]
 commands:
   drill:
     permission: smpdrill.admin

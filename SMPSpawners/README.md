@@ -1,4 +1,4 @@
-# SMP-Spawners 1.0.0 (author: Kaloyan)
+# SMP-Spawners 1.0.0 (author: im4theone)
 
 Original stacked spawners for Paper 1.21.11 (Java 21). Replaces the downloaded ISpawners.
 
