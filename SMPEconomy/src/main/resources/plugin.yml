@@ -1,0 +1,46 @@
+name: SMP-Economy
+version: '${version}'
+main: net.kaloyan.smpeconomy.SMPEconomy
+api-version: '1.21.11'
+description: Economy for the SMP - UUID-keyed balances in SQLite, /balance, /pay, /eco and a public service API.
+authors: [Kaloyan]
+depend: [SMP-Core]
+
+# Commands are registered through Paper's Brigadier lifecycle API (see EconomyCommands),
+# so there is intentionally no "commands:" section here.
+
+permissions:
+  smpeconomy.balance:
+    description: View your own balance (/balance).
+    default: true
+  smpeconomy.balance.others:
+    description: View another player's balance (/balance <player>).
+    default: op
+  smpeconomy.pay:
+    description: Pay other players (/pay).
+    default: true
+  smpeconomy.admin.balance:
+    description: Look up any balance with /eco balance.
+    default: op
+  smpeconomy.admin.set:
+    description: Overwrite a balance with /eco set.
+    default: op
+  smpeconomy.admin.add:
+    description: Create money with /eco add.
+    default: op
+  smpeconomy.admin.take:
+    description: Remove money with /eco take.
+    default: op
+  smpeconomy.admin.reload:
+    description: Reload config.yml with /eco reload.
+    default: op
+  smpeconomy.admin:
+    description: Every administrative permission, plus viewing other players' balances.
+    default: op
+    children:
+      smpeconomy.balance.others: true
+      smpeconomy.admin.balance: true
+      smpeconomy.admin.set: true
+      smpeconomy.admin.add: true
+      smpeconomy.admin.take: true
+      smpeconomy.admin.reload: true

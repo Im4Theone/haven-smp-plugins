@@ -1,0 +1,107 @@
+name: SMP-Punish
+version: '${version}'
+main: net.kaloyan.smppunish.SMPPunishPlugin
+api-version: '1.21.11'
+description: Custom kicks, bans, mutes and warnings with screens, presets and a record for every player.
+authors: [Kaloyan]
+commands:
+  ban:
+    permission: smppunish.ban
+    permission-message: You do not have permission to do that.
+    description: Ban a player (permanent unless you give a time).
+    usage: /<command> <player> [time|preset] [reason] [-s]
+  tempban:
+    permission: smppunish.ban
+    permission-message: You do not have permission to do that.
+    description: Ban a player for a length of time.
+    usage: /<command> <player> <time> [reason] [-s]
+  ipban:
+    permission: smppunish.ban
+    permission-message: You do not have permission to do that.
+    description: Ban a player and the address they last used.
+    usage: /<command> <player> [time|preset] [reason] [-s]
+  unban:
+    permission: smppunish.unban
+    permission-message: You do not have permission to do that.
+    description: Lift a ban.
+    aliases: [pardon]
+    usage: /<command> <player> [reason]
+  kick:
+    permission: smppunish.kick
+    permission-message: You do not have permission to do that.
+    description: Kick a player.
+    usage: /<command> <player> [reason] [-s]
+  mute:
+    permission: smppunish.mute
+    permission-message: You do not have permission to do that.
+    description: Mute a player.
+    aliases: [tempmute]
+    usage: /<command> <player> [time|preset] [reason] [-s]
+  unmute:
+    permission: smppunish.mute
+    permission-message: You do not have permission to do that.
+    description: Lift a mute.
+    usage: /<command> <player> [reason]
+  warn:
+    permission: smppunish.warn
+    permission-message: You do not have permission to do that.
+    description: Warn a player; warnings add up to automatic steps.
+    usage: /<command> <player> <reason or preset> [-s]
+  history:
+    permission: smppunish.history
+    permission-message: You do not have permission to do that.
+    description: A player's record.
+    aliases: [punishments]
+    usage: /<command> <player> [page]
+  punishment:
+    permission: smppunish.history
+    permission-message: You do not have permission to do that.
+    description: Show or lift one entry by number.
+    aliases: [pinfo]
+    usage: /<command> <number> | remove <number> [reason]
+  banlist:
+    permission: smppunish.history
+    permission-message: You do not have permission to do that.
+    description: Bans in force.
+    usage: /<command> [page]
+  alts:
+    permission: smppunish.history
+    permission-message: You do not have permission to do that.
+    description: Other players who used the same address.
+    usage: /<command> <player>
+  punish:
+    permission: smppunish.admin
+    permission-message: You do not have permission to do that.
+    description: Reload the configuration.
+    usage: /<command> reload
+permissions:
+  smppunish.ban:
+    description: Ban and ipban.
+    default: op
+  smppunish.unban:
+    description: Unban and lift entries.
+    default: op
+  smppunish.kick:
+    description: Kick.
+    default: op
+  smppunish.mute:
+    description: Mute and unmute.
+    default: op
+  smppunish.warn:
+    description: Warn.
+    default: op
+  smppunish.history:
+    description: Read records, ban list and alts.
+    default: op
+  smppunish.long:
+    description: Ban or mute permanently or for longer than the configured limit.
+    default: op
+  smppunish.notify:
+    description: See silent punishments.
+    default: op
+  smppunish.exempt:
+    description: Cannot be punished by players (the console still can).
+    default: false
+  smppunish.admin:
+    description: Reload the configuration.
+    default: op

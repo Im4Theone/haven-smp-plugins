@@ -1,0 +1,86 @@
+# SMP-Punish: kicks, bans, mutes and warnings with your own screens. Texts use MiniMessage
+# (https://docs.advntr.dev/minimessage/format.html). Changing config-version or removing it makes the plugin replace this file (your copy is kept).
+config-version: 1
+
+server-name: "Haven SMP"
+# Shown on the ban screen. Put your Discord invite or appeal page here.
+appeal: "discord.gg/your-invite"
+
+# Show bans, kicks, mutes and warnings to everybody (true) or only to staff with smppunish.notify (false).
+# Staff can always silence one with -s at the end of a command.
+public-broadcast: true
+
+# Staff without smppunish.long may not ban or mute for longer than this many days, and never permanently.
+max-days-without-long-permission: 30
+
+# Placeholders in screens and messages:
+#   <target> <staff> <reason> <duration> <expires> <remaining> <id> <appeal> <server>
+screens:
+  ban:
+    - "<red><bold>You are banned from <server></bold></red>"
+    - ""
+    - "<gray>Reason: <white><reason>"
+    - "<gray>Banned by: <white><staff>"
+    - "<gray>Expires: <white><expires> <dark_gray>(<remaining>)"
+    - "<gray>Ban ID: <white>#<id>"
+    - ""
+    - "<gray>Appeal at <aqua><appeal>"
+  kick:
+    - "<red><bold>You were kicked from <server></bold></red>"
+    - ""
+    - "<gray>Reason: <white><reason>"
+    - "<gray>By: <white><staff>"
+    - ""
+    - "<gray>You can join again right away. Please follow the rules."
+
+messages:
+  ban: "<red><target></red> <gray>was banned by</gray> <white><staff></white> <gray>(<duration>): <white><reason>"
+  unban: "<green><target></green> <gray>was unbanned by</gray> <white><staff></white><gray>.</gray>"
+  kick: "<red><target></red> <gray>was kicked by</gray> <white><staff></white><gray>: <white><reason>"
+  mute: "<red><target></red> <gray>was muted by</gray> <white><staff></white> <gray>(<duration>): <white><reason>"
+  unmute: "<green><target></green> <gray>was unmuted by</gray> <white><staff></white><gray>.</gray>"
+  warn: "<yellow><target></yellow> <gray>was warned by</gray> <white><staff></white><gray>: <white><reason>"
+  warned: "<yellow><bold>WARNING</bold> <white><reason> <gray>(warning <count>)"
+  muted: "<red>You are muted: <white><reason> <gray>(<remaining> left, mute #<id>)"
+  muted-command: "<red>You can't use that command while muted."
+  unmuted-notice: "<green>You are no longer muted."
+  no-permission: "<red>You don't have permission to do that."
+  unknown-player: "<red>I don't know a player called <white><name></white>. They need to have joined once."
+  not-online: "<red><name> is not online."
+  exempt: "<red>You can't punish that player."
+  already-banned: "<red><target> is already banned (ban #<id>)."
+  already-muted: "<red><target> is already muted (mute #<id>)."
+  not-banned: "<red><target> is not banned."
+  not-muted: "<red><target> is not muted."
+  bad-duration: "<red>That is not a length of time. Use for example 30m, 12h, 7d, 2w, 1mo, 1y or perm."
+  too-long: "<red>You may not do that for longer than <white><max> days</white>; ask a senior staff member."
+  need-duration: "<red>Give a length of time, for example /<command> <target> 7d <reason>."
+  saved-failed: "<red>That could not be saved, so nothing was changed."
+  usage: "<red>Usage: <usage>"
+
+# Commands a muted player cannot use.
+muted-commands: [msg, tell, w, whisper, r, reply, me, say, t]
+
+# Shortcuts: /ban Steve cheating   /mute Steve spam   /ban Steve 7d anything you want to add
+# type: BAN or MUTE is only a hint for the command's default; duration: perm or a length of time.
+presets:
+  cheating: {reason: "Cheating (hacked client / x-ray)", duration: perm}
+  xray: {reason: "X-ray", duration: 14d}
+  grief: {reason: "Griefing", duration: 7d}
+  spam: {reason: "Spamming", duration: 1h}
+  toxic: {reason: "Toxic behaviour / insults", duration: 1d}
+  advertising: {reason: "Advertising", duration: 1d}
+  dupe: {reason: "Exploiting a bug / duplication", duration: 30d}
+  ban-evasion: {reason: "Ban evasion", duration: perm}
+
+warnings:
+  # Warnings older than this many days do not count.
+  expiry-days: 30
+  # What happens automatically when a player reaches exactly this many warnings. action: KICK, MUTE or BAN.
+  escalation:
+    - {warns: 2, action: MUTE, duration: 1h}
+    - {warns: 3, action: BAN, duration: 1d}
+    - {warns: 5, action: BAN, duration: 7d}
+
+history:
+  page-size: 8

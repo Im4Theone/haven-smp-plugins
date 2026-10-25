@@ -1,0 +1,34 @@
+name: SMP-RTP
+version: '${version}'
+main: net.kaloyan.smprtp.SMPRtpPlugin
+api-version: '1.21.11'
+description: Random teleport in the overworld, the nether and the end.
+authors: [Kaloyan]
+softdepend: [Vault, SMP-VaultBridge, SMP-Protect]
+commands:
+  rtp:
+    description: Teleport to a random safe place in the overworld, nether or end.
+    aliases: [randomtp, wild]
+    usage: /<command> [overworld|nether|end]
+permissions:
+  smprtp.use:
+    description: Use /rtp.
+    default: true
+  smprtp.world.overworld:
+    description: Random teleport in the overworld.
+    default: true
+  smprtp.world.nether:
+    description: Random teleport in the nether.
+    default: true
+  smprtp.world.end:
+    description: Random teleport in the end.
+    default: true
+  smprtp.bypass.cooldown:
+    description: No cooldown.
+    default: op
+  smprtp.bypass.cost:
+    description: Pay nothing.
+    default: op
+  smprtp.admin:
+    description: /rtp reload, /rtp scout and /rtp player.
+    default: op

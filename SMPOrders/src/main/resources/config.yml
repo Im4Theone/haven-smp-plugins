@@ -1,0 +1,87 @@
+# SMP-Orders. Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 2
+
+orders:
+  # How many open orders one player can have.
+  max-active-per-player: 10
+  # Price limits for ONE item (at most 2 decimals).
+  min-price-per-item: 0.01
+  max-price-per-item: 1000000
+  # Most items in one order.
+  max-amount: 100000
+  # Percent of the order's total taken when it is created. It is not refunded when the order is cancelled.
+  creation-tax-percent: 5
+  # Most enchantments on one enchanted item order (0 = no limit).
+  max-enchantments-per-order: 5
+  # Days until an order expires (the money for what is not delivered is refunded).
+  expiry-days: 7
+  # Items nobody can order.
+  blocked-items:
+    - BEDROCK
+    - BARRIER
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - COMMAND_BLOCK_MINECART
+    - STRUCTURE_BLOCK
+    - STRUCTURE_VOID
+    - JIGSAW
+    - DEBUG_STICK
+    - KNOWLEDGE_BOOK
+    - LIGHT
+    - SPAWNER
+    - TRIAL_SPAWNER
+    - VAULT
+    - REINFORCED_DEEPSLATE
+    - END_PORTAL_FRAME
+    - PLAYER_HEAD
+    - PETRIFIED_OAK_SLAB
+    - FARMLAND
+    - DIRT_PATH
+    - CHORUS_PLANT
+    - BUDDING_AMETHYST
+    - FROGSPAWN
+    - INFESTED_STONE
+    - INFESTED_COBBLESTONE
+    - INFESTED_STONE_BRICKS
+    - INFESTED_MOSSY_STONE_BRICKS
+    - INFESTED_CRACKED_STONE_BRICKS
+    - INFESTED_CHISELED_STONE_BRICKS
+    - INFESTED_DEEPSLATE
+
+titles:
+  main: "<#00F986>ᴏʀᴅᴇʀꜱ (ᴘᴀɢᴇ <page>)"
+  mine: "<#00F986>ᴏʀᴅᴇʀꜱ - ʏᴏᴜʀ ᴏʀᴅᴇʀꜱ"
+  manage: "<#00F986>ᴏʀᴅᴇʀꜱ - ᴍᴀɴᴀɢᴇ ᴏʀᴅᴇʀ"
+  deliver: "<#00F986>ᴏʀᴅᴇʀꜱ - ᴅᴇʟɪᴠᴇʀ ɪᴛᴇᴍꜱ"
+  new: "<#00F986>ᴏʀᴅᴇʀꜱ - ɴᴇᴡ ᴏʀᴅᴇʀ"
+  select: "<#00F986>ꜱᴇʟᴇᴄᴛ ɪᴛᴇᴍ (ᴘᴀɢᴇ <page>)"
+  enchant: "<#00F986>ᴘɪᴄᴋ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛꜱ"
+
+messages:
+  order-created: "<white>You ordered <#00d271><amount> <item></#00d271> and paid <#00fc00><price></#00fc00> (tax included)."
+  order-cancelled: "<white>Order cancelled. You are refunded <#00fc00><price></#00fc00>; delivered items wait in your orders."
+  order-complete: "<white>Your <green><item></green> order is complete! Collect the items in /orders."
+  order-received: "<green><player></green> <white>delivered you <green><amount> <item></green>."
+  delivered: "<white>You delivered <green><amount> <item></green> and received <green><price></green>."
+  payout-later: "<yellow>The payment could not be made right now; you will get it shortly."
+  items-waiting: "<white>You have <gold><amount></gold> delivered item(s) waiting. Open /orders to collect them."
+  collected: "<white>You collected <green><amount> <item></green>."
+  order-gone: "<red>That order is not open any more."
+  own-order: "<red>You can't deliver to your own order."
+  wrong-items: "<red>Put <item> in the free slots first (not renamed, not damaged, with the right enchantments)."
+  not-enough-money: "<red>You don't have enough money. You need <yellow><total></yellow>."
+  max-orders: "<red>You have reached the maximum number of open orders (<yellow><limit></yellow>)."
+  bad-price: "<red>The price per item must be between <yellow><min></yellow> and <yellow><max></yellow>. Use for example 100, 2.5, 1k, 1.5m."
+  bad-amount: "<red>The amount must be a whole number from 1 to <yellow><max></yellow>. Use for example 64, 1k."
+  blocked: "<red>That item cannot be ordered."
+  set-all: "<red>Please set the item, the amount and the price first."
+  payment-unsure: "<red>The payment could not be confirmed, so no order was made. Check your balance and tell an admin if money is missing."
+  failed: "<red>That did not work. Nothing was changed."
+  enchant-conflict: "<red>That enchantment conflicts with one you already picked."
+  max-enchants: "<red>You can only pick up to <yellow><limit></yellow> enchantments."
+  type-amount: "<green>Type the amount in chat:"
+  type-price: "<green>Type the price per item in chat:"
+  type-search: "<yellow>Type an item name to search for:"
+  prompt-cancel: "<gray>Type cancel to go back."

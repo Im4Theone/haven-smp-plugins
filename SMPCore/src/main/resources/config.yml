@@ -1,0 +1,16 @@
+# SMP-Core configuration
+#
+# Apply changes to this file with "/smpcore reload". If the new file is invalid the reload
+# is rejected and the previously active settings stay in effect. Missing keys fall back to
+# the defaults shown here.
+
+# Prefix shown in front of SMP-Core chat messages. Uses MiniMessage formatting
+# (https://docs.advntr.dev/minimessage/format.html). Must not be blank; max 100 characters.
+prefix: "<dark_aqua>[SMP]</dark_aqua>"
+
+logging:
+  # Extra diagnostic output in the console (logged at INFO with a [DEBUG] marker).
+  debug: false
+  # Log a console line whenever a player joins / leaves (identified by UUID).
+  player-join: true
+  player-quit: true

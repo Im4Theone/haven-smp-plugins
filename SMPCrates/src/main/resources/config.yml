@@ -1,0 +1,156 @@
+# SMP-Crates configuration. A "key" is a virtual key kept on the player's account (no item), opened with /keys (or /crates). Apply changes with "/crates reload" (an invalid file is rejected and the old settings stay).
+#
+# Colours/format: MiniMessage. Reward types:
+#   item     material, amount (up to 2304), name (optional), enchantments (optional: sharpness: 5)
+#   money    amount - paid through Vault, i.e. your SMP-Economy
+#   shards   amount - needs DonutShop (the shard currency)
+#   command  command (run by the console, %player% = the winner), material and name for the menu
+# Every reward has a weight: a reward with weight 20 comes up twice as often as one with weight 10. "broadcast: true" tells
+# the whole server when somebody wins it.
+
+# KEYALL: when the timer reaches 0:00 every player who is online gets one crate, and the timer starts again at 60:00. The timer is
+# the server's clock (UTC): with 60 minutes a new round starts on every full hour, for all players at the same moment, and it
+# does not restart when the server does. The scoreboard shows it with <crate_timer> (SMP-Scoreboard).
+hourly:
+  enabled: true
+  crate: common
+  interval-minutes: 60
+  # false = only the players online at 0:00 get the key (a real keyall). true = a player who was offline during a round
+  # also gets that round's crate when they join (never more than one at a time).
+  catch-up: false
+
+# /keyall <crate> [amount] gives every player who is online a crate. Nobody has the permission smpcrates.keyall by default (not even
+# operators): give it to yourself with LuckPerms. As a second lock, list the player names that may use it; with an empty list anybody who
+# has the permission may. The console can always use it.
+keyall:
+  allowed-players: []
+
+crates:
+  common:
+    display: "<#9CA3AF><bold>Common Key"
+    material: TRIPWIRE_HOOK
+    rewards:
+      - {type: item, material: IRON_INGOT, amount: 16, weight: 22}
+      - {type: item, material: COAL, amount: 32, weight: 18}
+      - {type: item, material: BREAD, amount: 24, weight: 16}
+      - {type: item, material: COOKED_BEEF, amount: 16, weight: 14}
+      - {type: money, amount: 500, weight: 14, name: "<#4ADE80>$500"}
+      - {type: shards, amount: 1, weight: 10, name: "<#5EEAD4>1 Shard"}
+      - {type: item, material: GOLD_INGOT, amount: 8, weight: 8}
+      - {type: money, amount: 2000, weight: 4, name: "<#4ADE80>$2,000"}
+      - {type: item, material: DIAMOND, amount: 2, weight: 3}
+      - {type: shards, amount: 5, weight: 1, name: "<#5EEAD4>5 Shards", broadcast: true}
+
+  prime:
+    display: "<#38BDF8><bold>Prime Key"
+    material: TRIPWIRE_HOOK
+    rewards:
+      - {type: money, amount: 2500, weight: 22, name: "<#4ADE80>$2,500"}
+      - {type: item, material: DIAMOND, amount: 6, weight: 20}
+      - {type: item, material: ENDER_PEARL, amount: 8, weight: 14}
+      - {type: item, material: GOLDEN_APPLE, amount: 4, weight: 12}
+      - {type: shards, amount: 3, weight: 12, name: "<#5EEAD4>3 Shards"}
+      - {type: item, material: EXPERIENCE_BOTTLE, amount: 32, weight: 10}
+      - {type: money, amount: 7500, weight: 6, name: "<#4ADE80>$7,500"}
+      - {type: item, material: NETHERITE_SCRAP, amount: 2, weight: 4}
+      - {type: item, material: DIAMOND_PICKAXE, amount: 1, weight: 3, name: "<#38BDF8>Prime Pickaxe",
+         enchantments: {efficiency: 4, unbreaking: 3}}
+      - {type: shards, amount: 12, weight: 1, name: "<#5EEAD4>12 Shards", broadcast: true}
+
+  gold:
+    display: "<#FBBF24><bold>Gold Key"
+    material: TRIPWIRE_HOOK
+    rewards:
+      - {type: money, amount: 8000, weight: 22, name: "<#4ADE80>$8,000"}
+      - {type: item, material: DIAMOND_BLOCK, amount: 3, weight: 16}
+      - {type: item, material: NETHERITE_SCRAP, amount: 4, weight: 14}
+      - {type: shards, amount: 8, weight: 12, name: "<#5EEAD4>8 Shards"}
+      - {type: item, material: ENCHANTED_GOLDEN_APPLE, amount: 2, weight: 10}
+      - {type: item, material: DIAMOND_SWORD, amount: 1, weight: 8, name: "<#FBBF24>Gold Blade",
+         enchantments: {sharpness: 5, unbreaking: 3, looting: 3}}
+      - {type: command, command: "ispawners give %player% pig 1", material: PIG_SPAWN_EGG, name: "<#FBBF24>Pig Spawner", weight: 6}
+      - {type: money, amount: 25000, weight: 5, name: "<#4ADE80>$25,000", broadcast: true}
+      - {type: item, material: NETHERITE_INGOT, amount: 2, weight: 4}
+      - {type: command, command: "ispawners give %player% zombie 1", material: ZOMBIE_SPAWN_EGG, name: "<#FBBF24>Zombie Spawner", weight: 2, broadcast: true}
+
+  amethyst:
+    display: "<#F472B6><bold>Amethyst Key"
+    material: TRIPWIRE_HOOK
+    rewards:
+      - {type: money, amount: 20000, weight: 22, name: "<#4ADE80>$20,000"}
+      - {type: item, material: NETHERITE_INGOT, amount: 3, weight: 16}
+      - {type: shards, amount: 20, weight: 14, name: "<#5EEAD4>20 Shards"}
+      - {type: item, material: NETHERITE_PICKAXE, amount: 1, weight: 8, name: "<#F472B6>Amethyst Pickaxe",
+         enchantments: {efficiency: 5, unbreaking: 3, fortune: 3}}
+      - {type: item, material: TOTEM_OF_UNDYING, amount: 2, weight: 10}
+      - {type: item, material: DIAMOND_BLOCK, amount: 12, weight: 12}
+      - {type: command, command: "ispawners give %player% blaze 1", material: BLAZE_SPAWN_EGG, name: "<#F472B6>Blaze Spawner", weight: 6, broadcast: true}
+      - {type: money, amount: 75000, weight: 4, name: "<#4ADE80>$75,000", broadcast: true}
+      - {type: command, command: "ispawners give %player% iron_golem 1", material: IRON_GOLEM_SPAWN_EGG, name: "<#F472B6>Iron Golem Spawner", weight: 2, broadcast: true}
+      - {type: command, command: "drill give %player% 1", material: NETHERITE_PICKAXE, name: "<#F472B6>Amethyst Drill", weight: 2, broadcast: true}
+
+  crimson:
+    display: "<#F87171><bold>Crimson Key"
+    material: TRIPWIRE_HOOK
+    rewards:
+      - {type: money, amount: 60000, weight: 22, name: "<#4ADE80>$60,000"}
+      - {type: item, material: NETHERITE_BLOCK, amount: 1, weight: 14}
+      - {type: shards, amount: 50, weight: 14, name: "<#5EEAD4>50 Shards"}
+      - {type: item, material: NETHERITE_SWORD, amount: 1, weight: 8, name: "<#F87171>Crimson Edge",
+         enchantments: {sharpness: 5, unbreaking: 3, looting: 3, fire_aspect: 2}}
+      - {type: item, material: BEACON, amount: 1, weight: 8, broadcast: true}
+      - {type: item, material: ELYTRA, amount: 1, weight: 6, broadcast: true}
+      - {type: command, command: "ispawners give %player% blaze 3", material: BLAZE_SPAWN_EGG, name: "<#F87171>3 Blaze Spawners", weight: 7, broadcast: true}
+      - {type: money, amount: 250000, weight: 3, name: "<#4ADE80>$250,000", broadcast: true}
+      - {type: command, command: "ispawners give %player% iron_golem 3", material: IRON_GOLEM_SPAWN_EGG, name: "<#F87171>3 Iron Golem Spawners", weight: 2, broadcast: true}
+      - {type: command, command: "drill give %player% 1", material: NETHERITE_PICKAXE, name: "<#F472B6>Amethyst Drill", weight: 3, broadcast: true}
+      - {type: item, material: NETHERITE_BLOCK, amount: 5, weight: 1, name: "<#F87171>5 Netherite Blocks", broadcast: true}
+
+messages:
+  keyall-usage: "<#F87171>Usage: /keyall <crate> [amount]   (keys: <crates>)"
+  keyall-bad-amount: "<#F87171>The amount must be a number from 1 to 100."
+  keyall-nobody: "<#F87171>Nobody is online."
+  keyall-done: "<#4ADE80>Gave <count> <crate> <#4ADE80>to <players> player(s)."
+  keyall-manual: "<#FBBF24><bold>KEYALL <reset><#9CA3AF>- <player> gave everybody online <count> <crate><#9CA3AF>!"
+  hourly: "<#FBBF24><bold>KEYALL! <reset><#9CA3AF>You received a <crate> <#9CA3AF>- open it with /keys"
+  keyall: "<#FBBF24><bold>KEYALL <reset><#9CA3AF>- everybody online received a <crate><#9CA3AF>! Next one in <white><time>"
+  opened: "<#4ADE80>You opened a <crate> <#4ADE80>and got <reward><#4ADE80>!"
+  broadcast: "<#FBBF24><player> <#9CA3AF>opened a <crate> <#9CA3AF>and won <reward><#9CA3AF>!"
+  none-left: "<#F87171>You have no <crate> <#F87171>left."
+  cannot-deliver: "<#F87171>You cannot open a <crate> <#F87171>right now: make room in your inventory (or the reward is unavailable). Nothing was used."
+  delivery-failed: "<#F87171>The reward could not be handed over, so your <crate> <#F87171>was given back."
+  save-failed: "<#F87171>The key data could not be saved. Nothing was changed; tell an admin."
+  unknown-crate: "<#F87171>There is no such key. Keys: <crates>"
+  not-player: "<#F87171>Only players can do that."
+  no-permission: "<#F87171>You don't have permission to do that."
+  usage: "<#F87171>Usage: /keys [open <key> | preview <key> | balance | timer]"
+  reloaded: "<#4ADE80>SMP-Crates reloaded."
+  no-timer: "<#F87171>Keyall is switched off."
+  timer: "<#38BDF8>Next keyall in <white><time>"
+  balance-none: "<#9CA3AF><player> has no keys."
+  balance-line: "<crate> <#9CA3AF>x<white><count>"
+  unknown-player: "<#F87171>I don't know a player called <player>."
+  bad-amount: "<#F87171>The amount must be a number from 1 to 100000."
+  gave: "<#4ADE80>Gave <count> <crate> <#4ADE80>to <player>."
+  received: "<#4ADE80>You received <count> <crate><#4ADE80>! Open them with /keys"
+  took: "<#4ADE80>Took <count> <crate> <#4ADE80>from <player>."
+  not-enough: "<#F87171><player> does not have that many."
+  look-at-block: "<#F87171>Look at a block (within 6 blocks) first."
+  block-set: "<#4ADE80>That block now opens the <crate>. <#9CA3AF>Right click opens, left click shows the rewards."
+  block-removed: "<#4ADE80>That block is no longer a crate."
+  block-not-crate: "<#F87171>That block is not a crate."
+  block-protected: "<#F87171>That is a crate block. Admins remove it with /crates removeblock."
+  menu-title: "<#FBBF24>Keys"
+  menu-have: "<#9CA3AF>You have: <white><count>"
+  menu-open: "<#4ADE80>Left click: open one"
+  menu-none: "<#F87171>You have none to open"
+  menu-preview: "<#38BDF8>Right click: see the rewards"
+  menu-timer: "<#FBBF24>Keyall in <white><time>"
+  menu-timer-lore: "<#9CA3AF>At 00:00 everybody online gets a key"
+  menu-no-timer: "<#9CA3AF>Keyall is switched off"
+  menu-back: "<#F87171>Back"
+  preview-title: "<crate> <#9CA3AF>rewards"
+  preview-chance: "<#9CA3AF>Chance: <white><chance>%"
+  preview-rare: "<#FBBF24>Announced to everyone when won"
+  opening-title: "Opening <crate>"
+  won: "<#4ADE80>You won this!"

@@ -1,0 +1,2 @@
+Put these jars in a "libs" folder here before building (see the main README):
+SMP-Core-1.0.0.jar

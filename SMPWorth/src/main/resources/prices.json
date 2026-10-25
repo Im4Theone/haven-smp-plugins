@@ -1,0 +1,6067 @@
+{
+  "metadata": {
+    "title": "DonutSMP-style custom item economy",
+    "server": "DonutSMP-inspired, unofficial",
+    "minecraft_edition": "Java Edition",
+    "currency": "coins",
+    "generated_on": "2026-10-23",
+    "item_count": 1404,
+    "complete": false,
+    "price_type": "custom_estimated_base_value",
+    "warning": "Custom balancing draft. Not official DonutSMP /sell values. Review before using as a production economy.",
+    "pricing_model": "final_value = base_value + sum(enchantment bonus_per_level * enchantment level); incompatible enchantments and invalid levels should be rejected.",
+    "sheet_version": 2,
+    "scale": "every price of the original draft multiplied by 10"
+  },
+  "items": {
+    "acacia_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "acacia_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "acacia_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "acacia_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "acacia_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "acacia_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "acacia_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "acacia_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "acacia_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "acacia_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "acacia_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "acacia_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "acacia_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "acacia_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "acacia_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "acacia_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "acacia_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "acacia_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "acacia_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "activator_rail": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "air": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "allay_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "allium": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "amethyst_block": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "amethyst_cluster": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "amethyst_shard": {
+      "base_value": 250.0,
+      "category": "gem"
+    },
+    "ancient_debris": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "andesite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "andesite_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "andesite_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "andesite_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "anvil": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "apple": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "armadillo_scute": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "armadillo_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "armor_stand": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "arrow": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "axolotl_bucket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "axolotl_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "azalea": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "azalea_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "azure_bluet": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "baked_potato": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "bamboo": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "bamboo_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "bamboo_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "bamboo_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "bamboo_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "bamboo_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "bamboo_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "bamboo_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "bamboo_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "bamboo_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "bamboo_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "bamboo_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "bamboo_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "bamboo_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "bamboo_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "bamboo_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "bamboo_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "bamboo_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "bamboo_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "barrel": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "barrier": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "basalt": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "bat_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "beacon": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "bedrock": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "bee_nest": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "bee_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "beef": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "beehive": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "beetroot": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "beetroot_seeds": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "beetroot_soup": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "bell": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "big_dripleaf": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "birch_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "birch_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "birch_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "birch_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "birch_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "birch_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "birch_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "birch_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "birch_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "birch_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "birch_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "birch_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "birch_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "birch_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "birch_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "birch_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "birch_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "birch_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "birch_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "black_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "black_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "black_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "black_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "black_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "black_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "black_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "black_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "black_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "black_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "black_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "black_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "black_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "black_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "blackstone": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "blackstone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "blackstone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "blackstone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "blast_furnace": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "blaze_powder": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "blaze_rod": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "blaze_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "blue_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "blue_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "blue_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "blue_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "blue_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "blue_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "blue_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "blue_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "blue_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "blue_ice": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "blue_orchid": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "blue_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "blue_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "blue_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "blue_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "blue_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "bogged_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "bolt_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "bone": {
+      "base_value": 20.0,
+      "category": "mob_drop"
+    },
+    "bone_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "bone_meal": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "book": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "bookshelf": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "bow": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "bowl": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "brain_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "brain_coral_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "brain_coral_fan": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "bread": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "breeze_rod": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "breeze_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "brewing_stand": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "brick": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "brick_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "brick_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "brick_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "brick_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "bricks": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "brown_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "brown_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "brown_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "brown_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "brown_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "brown_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "brown_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "brown_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "brown_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "brown_mushroom": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "brown_mushroom_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "brown_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "brown_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "brown_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "brown_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "brown_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "brush": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "bubble_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "bubble_coral_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "bubble_coral_fan": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "bucket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "budding_amethyst": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "cactus": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "cake": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "calcite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "calibrated_sculk_sensor": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "camel_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "campfire": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "candle": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "carpet": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "carrot": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "carrot_on_a_stick": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "cartography_table": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "carved_pumpkin": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "cat_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "cauldron": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "cave_spider_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "chain": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "chain_command_block": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "chainmail_boots": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "chainmail_chestplate": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "chainmail_helmet": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "chainmail_leggings": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "charcoal": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "cherry_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "cherry_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "cherry_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "cherry_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "cherry_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cherry_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "cherry_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "cherry_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "cherry_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "cherry_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "cherry_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "cherry_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "cherry_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "cherry_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "cherry_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "cherry_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "cherry_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "cherry_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "cherry_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "chest": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "chest_minecart": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "chicken": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "chicken_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "chipped_anvil": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "chiseled_bookshelf": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "chiseled_quartz_block": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "chiseled_stone_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "chiseled_tuff": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "chiseled_tuff_bricks": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "chorus_flower": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "chorus_fruit": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "chorus_plant": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "clay": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "clay_ball": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "clock": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "coal": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "coal_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "coarse_dirt": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "coast_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "cobbled_deepslate": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cobbled_deepslate_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "cobbled_deepslate_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "cobbled_deepslate_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "cobblestone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cobblestone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "cobblestone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "cobblestone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "cobweb": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "cocoa_beans": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "cod": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "cod_bucket": {
+      "base_value": 30.0,
+      "category": "food"
+    },
+    "command_block": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "comparator": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "compass": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "composter": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "conduit": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "cooked_beef": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cooked_chicken": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cooked_cod": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cooked_mutton": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cooked_porkchop": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cooked_rabbit": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cooked_salmon": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "cookie": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "copper_bulb": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "copper_ingot": {
+      "base_value": 120.0,
+      "category": "ingot"
+    },
+    "copper_nugget": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "copper_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "cornflower": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "cow_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "cracked_deepslate_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cracked_deepslate_tiles": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cracked_nether_bricks": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "cracked_stone_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "crafter": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "crafting_table": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "creaking_heart": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "creeper_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "creeper_head": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "creeper_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "crimson_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "crimson_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "crimson_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "crimson_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "crimson_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "crimson_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "crimson_fungus": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "crimson_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "crimson_hyphae": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "crimson_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "crimson_nylium": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "crimson_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "crimson_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "crimson_roots": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "crimson_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "crimson_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "crimson_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "crimson_stem": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "crimson_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "crimson_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "crimson_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "crimson_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "crossbow": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "crying_obsidian": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "cut_copper": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "cut_red_sandstone": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "cut_sandstone": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "cyan_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "cyan_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "cyan_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "cyan_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "cyan_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cyan_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "cyan_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "cyan_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "cyan_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "cyan_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "cyan_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "cyan_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "cyan_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "cyan_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "damaged_anvil": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "dandelion": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "dark_oak_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "dark_oak_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "dark_oak_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "dark_oak_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "dark_oak_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "dark_oak_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "dark_oak_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "dark_oak_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "dark_oak_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "dark_oak_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "dark_oak_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "dark_oak_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "dark_oak_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "dark_oak_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "dark_oak_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "dark_oak_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "dark_oak_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "dark_oak_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "dark_oak_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "dark_prismarine": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "dark_prismarine_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "dark_prismarine_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "dark_prismarine_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "daylight_detector": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "dead_brain_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "dead_bubble_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "dead_bush": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "dead_fire_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "dead_horn_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "dead_tube_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "decorated_pot": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "deepslate": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "deepslate_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "deepslate_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "deepslate_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "deepslate_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "deepslate_coal_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_copper_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_diamond_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_emerald_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_gold_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_iron_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_lapis_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_redstone_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "deepslate_tiles": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "deepslate_tiles_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "deepslate_tiles_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "deepslate_tiles_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "detector_rail": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "diamond": {
+      "base_value": 250.0,
+      "category": "gem"
+    },
+    "diamond_axe": {
+      "base_value": 900.0,
+      "category": "tool_or_weapon"
+    },
+    "diamond_block": {
+      "base_value": 800.0,
+      "category": "rare_loot"
+    },
+    "diamond_boots": {
+      "base_value": 1080.0,
+      "category": "armor"
+    },
+    "diamond_chestplate": {
+      "base_value": 1080.0,
+      "category": "armor"
+    },
+    "diamond_helmet": {
+      "base_value": 1080.0,
+      "category": "armor"
+    },
+    "diamond_hoe": {
+      "base_value": 900.0,
+      "category": "tool_or_weapon"
+    },
+    "diamond_horse_armor": {
+      "base_value": 800.0,
+      "category": "rare_loot"
+    },
+    "diamond_leggings": {
+      "base_value": 1080.0,
+      "category": "armor"
+    },
+    "diamond_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "diamond_pickaxe": {
+      "base_value": 900.0,
+      "category": "tool_or_weapon"
+    },
+    "diamond_shovel": {
+      "base_value": 900.0,
+      "category": "tool_or_weapon"
+    },
+    "diamond_sword": {
+      "base_value": 900.0,
+      "category": "tool_or_weapon"
+    },
+    "diorite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "diorite_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "diorite_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "diorite_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "dirt": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "disc_fragment_5": {
+      "base_value": 250.0,
+      "category": "collectible"
+    },
+    "dispenser": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "dolphin_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "donkey_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "dragon_breath": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "dragon_egg": {
+      "base_value": 10000.0,
+      "category": "rare_loot"
+    },
+    "dragon_head": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "dried_kelp": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "dried_kelp_block": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "dripstone_block": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "dropper": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "drowned_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "dune_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "echo_shard": {
+      "base_value": 450.0,
+      "category": "rare_material"
+    },
+    "egg": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "elder_guardian_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "elytra": {
+      "base_value": 1800.0,
+      "category": "rare_loot"
+    },
+    "emerald": {
+      "base_value": 250.0,
+      "category": "gem"
+    },
+    "emerald_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "emerald_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "enchanted_book": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "enchanted_book_aqua_affinity": {
+      "base_value": 48.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_bane_of_arthropods": {
+      "base_value": 105.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_blast_protection": {
+      "base_value": 84.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_breach": {
+      "base_value": 240.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_channeling": {
+      "base_value": 108.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_curse_of_binding": {
+      "base_value": -48.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_curse_of_vanishing": {
+      "base_value": -72.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_density": {
+      "base_value": 210.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_depth_strider": {
+      "base_value": 90.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_efficiency": {
+      "base_value": 150.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_feather_falling": {
+      "base_value": 96.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_fire_aspect": {
+      "base_value": 84.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_fire_protection": {
+      "base_value": 72.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_flame": {
+      "base_value": 60.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_fortune": {
+      "base_value": 252.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_frost_walker": {
+      "base_value": 96.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_impaling": {
+      "base_value": 180.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_infinity": {
+      "base_value": 180.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_knockback": {
+      "base_value": 60.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_looting": {
+      "base_value": 216.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_loyalty": {
+      "base_value": 144.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_luck_of_the_sea": {
+      "base_value": 180.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_lure": {
+      "base_value": 126.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_mending": {
+      "base_value": 210.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_multishot": {
+      "base_value": 72.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_piercing": {
+      "base_value": 120.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_power": {
+      "base_value": 180.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_projectile_protection": {
+      "base_value": 72.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_protection": {
+      "base_value": 96.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_punch": {
+      "base_value": 60.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_quick_charge": {
+      "base_value": 126.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_respiration": {
+      "base_value": 90.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_riptide": {
+      "base_value": 216.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_sharpness": {
+      "base_value": 180.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_silk_touch": {
+      "base_value": 132.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_smite": {
+      "base_value": 135.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_soul_speed": {
+      "base_value": 126.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_sweeping": {
+      "base_value": 90.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_sweeping_edge": {
+      "base_value": 90.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_swift_sneak": {
+      "base_value": 162.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_thorns": {
+      "base_value": 108.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_unbreaking": {
+      "base_value": 126.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_book_wind_burst": {
+      "base_value": 324.0,
+      "category": "enchanted_book",
+      "notes": "Custom estimate; enchantment value is also represented in enchantment_rules."
+    },
+    "enchanted_golden_apple": {
+      "base_value": 2500.0,
+      "category": "rare_loot"
+    },
+    "enchanting_table": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "end_crystal": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "end_rod": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "end_stone": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "end_stone_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "end_stone_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "end_stone_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "end_stone_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "ender_chest": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "ender_eye": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "ender_pearl": {
+      "base_value": 20.0,
+      "category": "mob_drop"
+    },
+    "enderman_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "endermite_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "evoker_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "experience_bottle": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "explorer_pottery_sherd": {
+      "base_value": 80.0,
+      "category": "resource"
+    },
+    "exposed_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "exposed_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "exposed_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "exposed_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "exposed_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "exposed_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "exposed_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "exposed_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "exposed_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "exposed_cut_copper": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "exposed_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "exposed_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "exposed_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "eye_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "eyeblossom_closed": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "eyeblossom_open": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "feather": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "fermented_spider_eye": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "fern": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "filled_map": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "fire_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "fire_coral_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "fire_coral_fan": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "firework_rocket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "firework_star": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "fishing_rod": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "fletching_table": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "flint": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "flint_and_steel": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "flow_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "flow_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "flower_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "flower_pot": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "flowering_azalea": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "flowering_azalea_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "fox_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "frog_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "froglight": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "frogspawn": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "furnace": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "furnace_minecart": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "ghast_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "ghast_tear": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "gilded_blackstone": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "glass": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "glass_bottle": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "glass_pane": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "glistering_melon_slice": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "globe_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "glow_berries": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "glow_ink_sac": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "glow_item_frame": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "glow_lichen": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "glow_squid_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "glowstone": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "glowstone_dust": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "goat_horn": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "goat_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "gold_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "gold_ingot": {
+      "base_value": 120.0,
+      "category": "ingot"
+    },
+    "gold_nugget": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "gold_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "golden_apple": {
+      "base_value": 350.0,
+      "category": "food"
+    },
+    "golden_axe": {
+      "base_value": 80.0,
+      "category": "tool_or_weapon"
+    },
+    "golden_boots": {
+      "base_value": 96.0,
+      "category": "armor"
+    },
+    "golden_carrot": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "golden_chestplate": {
+      "base_value": 96.0,
+      "category": "armor"
+    },
+    "golden_helmet": {
+      "base_value": 96.0,
+      "category": "armor"
+    },
+    "golden_hoe": {
+      "base_value": 80.0,
+      "category": "tool_or_weapon"
+    },
+    "golden_horse_armor": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "golden_leggings": {
+      "base_value": 96.0,
+      "category": "armor"
+    },
+    "golden_pickaxe": {
+      "base_value": 80.0,
+      "category": "tool_or_weapon"
+    },
+    "golden_shovel": {
+      "base_value": 80.0,
+      "category": "tool_or_weapon"
+    },
+    "golden_sword": {
+      "base_value": 80.0,
+      "category": "tool_or_weapon"
+    },
+    "granite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "granite_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "granite_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "granite_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "grass": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "grass_block": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "gravel": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "gray_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "gray_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "gray_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "gray_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "gray_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "gray_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "gray_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "gray_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "gray_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "gray_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "gray_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "gray_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "gray_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "gray_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "green_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "green_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "green_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "green_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "green_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "green_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "green_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "green_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "green_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "green_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "green_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "green_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "green_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "green_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "grindstone": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "guardian_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "gunpowder": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "guster_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "hanging_roots": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "hay_block": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "heart_of_the_sea": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "heavy_core": {
+      "base_value": 2200.0,
+      "category": "rare_loot"
+    },
+    "hoglin_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "honey_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "honey_bottle": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "honeycomb": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "honeycomb_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "hopper": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "hopper_minecart": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "horn_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "horn_coral_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "horn_coral_fan": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "horse_armor_diamond": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "horse_armor_golden": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "horse_armor_iron": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "horse_armor_leather": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "horse_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "host_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "howling_winds_banner_pattern": {
+      "base_value": 250.0,
+      "category": "collectible"
+    },
+    "husk_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "ice": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "infested_cobblestone": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "infested_stone": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "ink_sac": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "iron_axe": {
+      "base_value": 180.0,
+      "category": "tool_or_weapon"
+    },
+    "iron_bars": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "iron_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "iron_boots": {
+      "base_value": 216.0,
+      "category": "armor"
+    },
+    "iron_chestplate": {
+      "base_value": 216.0,
+      "category": "armor"
+    },
+    "iron_door": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "iron_golem_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "iron_helmet": {
+      "base_value": 216.0,
+      "category": "armor"
+    },
+    "iron_hoe": {
+      "base_value": 180.0,
+      "category": "tool_or_weapon"
+    },
+    "iron_horse_armor": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "iron_ingot": {
+      "base_value": 120.0,
+      "category": "ingot"
+    },
+    "iron_leggings": {
+      "base_value": 216.0,
+      "category": "armor"
+    },
+    "iron_nugget": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "iron_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "iron_pickaxe": {
+      "base_value": 180.0,
+      "category": "tool_or_weapon"
+    },
+    "iron_shovel": {
+      "base_value": 180.0,
+      "category": "tool_or_weapon"
+    },
+    "iron_sword": {
+      "base_value": 180.0,
+      "category": "tool_or_weapon"
+    },
+    "iron_trapdoor": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "item_frame": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "jack_o_lantern": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "jigsaw": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "jukebox": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "jungle_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "jungle_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "jungle_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "jungle_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "jungle_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "jungle_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "jungle_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "jungle_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "jungle_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "jungle_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "jungle_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "jungle_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "jungle_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "jungle_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "jungle_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "jungle_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "jungle_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "jungle_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "jungle_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "kelp": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "knowledge_book": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "ladder": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "lantern": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "lapis_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "lapis_lazuli": {
+      "base_value": 250.0,
+      "category": "gem"
+    },
+    "lapis_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "large_amethyst_bud": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "large_fern": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "lava_bucket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "lead": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "leather": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "leather_boots": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "leather_chestplate": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "leather_helmet": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "leather_leggings": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "lectern": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "lever": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "light_blue_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "light_blue_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "light_blue_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "light_blue_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "light_blue_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "light_blue_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_blue_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "light_blue_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "light_blue_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "light_blue_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "light_blue_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_blue_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "light_blue_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_blue_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_gray_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "light_gray_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "light_gray_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "light_gray_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "light_gray_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "light_gray_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_gray_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "light_gray_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "light_gray_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "light_gray_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "light_gray_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_gray_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "light_gray_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_gray_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "light_weighted_pressure_plate": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "lightning_rod": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "lilac": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "lily_of_the_valley": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "lily_pad": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "lime_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "lime_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "lime_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "lime_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "lime_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "lime_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "lime_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "lime_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "lime_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "lime_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "lime_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "lime_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "lime_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "lime_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "lingering_potion": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "llama_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "lodestone": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "loom": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "mace": {
+      "base_value": 1200.0,
+      "category": "rare_loot"
+    },
+    "magenta_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "magenta_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "magenta_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "magenta_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "magenta_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "magenta_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "magenta_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "magenta_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "magenta_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "magenta_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "magenta_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "magenta_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "magenta_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "magenta_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "magma_block": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "magma_cream": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "mangrove_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "mangrove_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "mangrove_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "mangrove_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "mangrove_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "mangrove_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "mangrove_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "mangrove_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "mangrove_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "mangrove_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "mangrove_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "mangrove_propagule": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "mangrove_roots": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "mangrove_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "mangrove_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "mangrove_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "mangrove_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "mangrove_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "mangrove_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "mangrove_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "map": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "medium_amethyst_bud": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "melon": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "melon_seeds": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "melon_slice": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "milk_bucket": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "minecart": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "mojang_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "mooshroom_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "moss_block": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "moss_carpet": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "mossy_cobblestone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "mossy_cobblestone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "mossy_cobblestone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "mossy_cobblestone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "mossy_stone_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "mossy_stone_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "mossy_stone_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "mossy_stone_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "mud": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "mud_brick": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "mud_bricks": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "mud_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "mud_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "mud_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "muddy_mangrove_roots": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "mushroom_stew": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "music_disc_11": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_13": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_5": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_blocks": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_cat": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_chirp": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_creator": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_creator_music_box": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_far": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_lava_chicken": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_mall": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_mellohi": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_otherside": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_pigstep": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_precipice": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_relic": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_stal": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_strad": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_tears": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_wait": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "music_disc_ward": {
+      "base_value": 350.0,
+      "category": "collectible"
+    },
+    "mutton": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "mycelium": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "name_tag": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "nautilus_shell": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "nether_brick": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "nether_brick_fence": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "nether_brick_slab": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "nether_brick_stairs": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "nether_brick_wall": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "nether_bricks": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "nether_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "nether_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "nether_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "nether_gold_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "nether_quartz_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "nether_star": {
+      "base_value": 3500.0,
+      "category": "rare_loot"
+    },
+    "nether_wart": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "nether_wart_block": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "netherite_axe": {
+      "base_value": 3000.0,
+      "category": "tool_or_weapon"
+    },
+    "netherite_block": {
+      "base_value": 800.0,
+      "category": "rare_loot"
+    },
+    "netherite_boots": {
+      "base_value": 3600.0,
+      "category": "armor"
+    },
+    "netherite_chestplate": {
+      "base_value": 3600.0,
+      "category": "armor"
+    },
+    "netherite_helmet": {
+      "base_value": 3600.0,
+      "category": "armor"
+    },
+    "netherite_hoe": {
+      "base_value": 3000.0,
+      "category": "tool_or_weapon"
+    },
+    "netherite_ingot": {
+      "base_value": 120.0,
+      "category": "ingot"
+    },
+    "netherite_leggings": {
+      "base_value": 3600.0,
+      "category": "armor"
+    },
+    "netherite_pickaxe": {
+      "base_value": 3000.0,
+      "category": "tool_or_weapon"
+    },
+    "netherite_scrap": {
+      "base_value": 450.0,
+      "category": "rare_material"
+    },
+    "netherite_shovel": {
+      "base_value": 3000.0,
+      "category": "tool_or_weapon"
+    },
+    "netherite_sword": {
+      "base_value": 3000.0,
+      "category": "tool_or_weapon"
+    },
+    "netherite_upgrade_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "netherrack": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "note_block": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "oak_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "oak_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "oak_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "oak_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "oak_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "oak_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "oak_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "oak_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "oak_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "oak_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "oak_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "oak_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "oak_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "oak_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "oak_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "oak_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "oak_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "oak_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "oak_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "observer": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "obsidian": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "ochre_froglight": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "ominous_bottle": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "ominous_trial_key": {
+      "base_value": 400.0,
+      "category": "rare_loot"
+    },
+    "ominous_trial_spawner": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "ominous_vault": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "orange_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "orange_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "orange_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "orange_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "orange_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "orange_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "orange_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "orange_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "orange_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "orange_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "orange_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "orange_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "orange_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "orange_tulip": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "orange_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "oxeye_daisy": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "oxidized_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "oxidized_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "oxidized_cut_copper": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "oxidized_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "oxidized_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "oxidized_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "packed_mud": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "painting": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "pale_hanging_moss": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "pale_moss_block": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "pale_moss_carpet": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "pale_oak_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "pale_oak_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "pale_oak_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "pale_oak_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "pale_oak_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "pale_oak_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "pale_oak_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "pale_oak_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "pale_oak_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "pale_oak_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "pale_oak_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "pale_oak_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "pale_oak_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "pale_oak_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "pale_oak_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "pale_oak_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "pale_oak_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "pale_oak_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "pale_oak_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "panda_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "paper": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "parrot_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "pearlescent_froglight": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "peony": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "phantom_membrane": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "pig_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "piglin_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "piglin_head": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "pink_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "pink_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "pink_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "pink_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "pink_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "pink_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "pink_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "pink_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "pink_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "pink_petals": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "pink_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "pink_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "pink_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "pink_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "pink_tulip": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "pink_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "piston": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "pitcher_plant": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "pitcher_pod": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "player_head": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "podzol": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "pointed_dripstone": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "poisonous_potato": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "polar_bear_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "polished_andesite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "polished_basalt": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "polished_blackstone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "polished_blackstone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "polished_deepslate": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "polished_diorite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "polished_granite": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "polished_tuff": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "polished_tuff_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "polished_tuff_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "polished_tuff_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "popped_chorus_fruit": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "poppy": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "porkchop": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "potato": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "potion": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "powder_snow_bucket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "powered_rail": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "prismarine": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "prismarine_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "prismarine_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "prismarine_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "prismarine_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "prismarine_crystals": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "prismarine_shard": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "prismarine_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "prismarine_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "prismarine_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "pufferfish": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "pufferfish_bucket": {
+      "base_value": 30.0,
+      "category": "food"
+    },
+    "pumpkin": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "pumpkin_pie": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "pumpkin_seeds": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "purple_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "purple_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "purple_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "purple_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "purple_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "purple_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "purple_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "purple_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "purple_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "purple_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "purple_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "purple_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "purple_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "purple_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "purpur_block": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "purpur_pillar": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "purpur_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "purpur_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "purpur_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "quartz": {
+      "base_value": 250.0,
+      "category": "gem"
+    },
+    "quartz_block": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "quartz_bricks": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "quartz_pillar": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "quartz_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "quartz_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "quartz_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "rabbit": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "rabbit_foot": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "rabbit_hide": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "rabbit_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "rabbit_stew": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "rail": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "raiser_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "ravager_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "raw_copper": {
+      "base_value": 70.0,
+      "category": "raw_ore"
+    },
+    "raw_gold": {
+      "base_value": 70.0,
+      "category": "raw_ore"
+    },
+    "raw_iron": {
+      "base_value": 70.0,
+      "category": "raw_ore"
+    },
+    "recovery_compass": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "red_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "red_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "red_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "red_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "red_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "red_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "red_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "red_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "red_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "red_mushroom": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "red_mushroom_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "red_nether_bricks": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "red_nether_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "red_nether_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "red_nether_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "red_sand": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "red_sandstone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "red_sandstone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "red_sandstone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "red_sandstone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "red_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "red_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "red_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "red_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "red_tulip": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "red_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "redstone": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "redstone_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "redstone_lamp": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "redstone_ore": {
+      "base_value": 80.0,
+      "category": "ore"
+    },
+    "reinforced_deepslate": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "repeater": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "repeating_command_block": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "resin_block": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "resin_brick_slab": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "resin_brick_stairs": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "resin_brick_wall": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "resin_bricks": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "resin_clump": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "respawn_anchor": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "rib_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "rooted_dirt": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "rose_bush": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "rotten_flesh": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "saddle": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "salmon": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "salmon_bucket": {
+      "base_value": 30.0,
+      "category": "food"
+    },
+    "sand": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "sandstone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "sandstone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "sandstone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "sandstone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "scaffolding": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "sculk": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "sculk_catalyst": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "sculk_sensor": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "sculk_shrieker": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "sculk_vein": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "scute": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "sea_lantern": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "sea_pickle": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "seagrass": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "sentry_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "shears": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "sheep_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "shield": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "short_grass": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "shroomlight": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "shulker_box": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "shulker_shell": {
+      "base_value": 450.0,
+      "category": "rare_material"
+    },
+    "shulker_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "silence_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "skeleton_horse_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "skeleton_skull": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "skeleton_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "skull_banner_pattern": {
+      "base_value": 200.0,
+      "category": "collectible"
+    },
+    "slime_ball": {
+      "base_value": 20.0,
+      "category": "mob_drop"
+    },
+    "slime_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "slime_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "small_amethyst_bud": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "small_dripleaf": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "smithing_table": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "smoker": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "smooth_basalt": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "smooth_quartz": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "smooth_stone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "sniffer_egg": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "sniffer_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "snout_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "snow": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "snow_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "snow_golem_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "snowball": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "soul_campfire": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "soul_fire": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "soul_lantern": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "soul_sand": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "soul_soil": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "soul_torch": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "spawner": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "spectral_arrow": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "spider_eye": {
+      "base_value": 25.0,
+      "category": "food"
+    },
+    "spider_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "spire_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "splash_potion": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "sponge": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "spore_blossom": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "spruce_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "spruce_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "spruce_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "spruce_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "spruce_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "spruce_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "spruce_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "spruce_leaves": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "spruce_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "spruce_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "spruce_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "spruce_sapling": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "spruce_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "spruce_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "spruce_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "spruce_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "spruce_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "spruce_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "spruce_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "spyglass": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "squid_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "stick": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "sticky_piston": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "stone": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "stone_axe": {
+      "base_value": 50.0,
+      "category": "tool_or_weapon"
+    },
+    "stone_boots": {
+      "base_value": 60.0,
+      "category": "armor"
+    },
+    "stone_brick_slab": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "stone_brick_stairs": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "stone_brick_wall": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "stone_bricks": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "stone_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "stone_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "stone_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "stone_chestplate": {
+      "base_value": 60.0,
+      "category": "armor"
+    },
+    "stone_helmet": {
+      "base_value": 60.0,
+      "category": "armor"
+    },
+    "stone_hoe": {
+      "base_value": 50.0,
+      "category": "tool_or_weapon"
+    },
+    "stone_leggings": {
+      "base_value": 60.0,
+      "category": "armor"
+    },
+    "stone_pickaxe": {
+      "base_value": 50.0,
+      "category": "tool_or_weapon"
+    },
+    "stone_shovel": {
+      "base_value": 50.0,
+      "category": "tool_or_weapon"
+    },
+    "stone_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "stone_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "stone_sword": {
+      "base_value": 50.0,
+      "category": "tool_or_weapon"
+    },
+    "stone_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "stonecutter": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "strider_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "string": {
+      "base_value": 20.0,
+      "category": "mob_drop"
+    },
+    "stripped_acacia_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_bamboo_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "stripped_birch_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_cherry_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_crimson_stem": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "stripped_dark_oak_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_jungle_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_mangrove_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_oak_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_pale_oak_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_spruce_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "stripped_warped_stem": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "structure_block": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special",
+      "notes": "Not normally obtainable in survival; assigned zero by default."
+    },
+    "structure_void": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "sugar": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "sugar_cane": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "sunflower": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "suspicious_gravel": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "suspicious_sand": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "suspicious_stew": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "sweet_berries": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "tadpole_bucket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "tadpole_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "tall_grass": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "target": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "terracotta": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "tide_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "tinted_glass": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "tipped_arrow": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "tnt": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "tnt_minecart": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "torch": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "torchflower": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "torchflower_seeds": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "trader_llama_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "trapped_chest": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "trial_key": {
+      "base_value": 400.0,
+      "category": "rare_loot"
+    },
+    "trial_spawner": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "trident": {
+      "base_value": 1200.0,
+      "category": "rare_loot"
+    },
+    "tripwire_hook": {
+      "base_value": 40.0,
+      "category": "utility"
+    },
+    "tropical_fish": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "tropical_fish_bucket": {
+      "base_value": 30.0,
+      "category": "food"
+    },
+    "tube_coral": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "tube_coral_block": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "tube_coral_fan": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "tuff": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "tuff_brick_slab": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "tuff_brick_stairs": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "tuff_brick_wall": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "tuff_bricks": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "tuff_bricks_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "tuff_bricks_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "tuff_bricks_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "turtle_egg": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "turtle_helmet": {
+      "base_value": 50.0,
+      "category": "brewing"
+    },
+    "turtle_master": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "turtle_scute": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "turtle_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "twisting_vines": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "vault": {
+      "base_value": 80.0,
+      "category": "new_content"
+    },
+    "verdant_froglight": {
+      "base_value": 20.0,
+      "category": "material"
+    },
+    "vex_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "villager_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "vindicator_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "vine": {
+      "base_value": 15.0,
+      "category": "plant"
+    },
+    "wall_hanging_sign": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "wandering_trader_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "ward_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "warden_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "warped_boat": {
+      "base_value": 40.0,
+      "category": "transport"
+    },
+    "warped_button": {
+      "base_value": 5.0,
+      "category": "redstone"
+    },
+    "warped_chest_boat": {
+      "base_value": 60.0,
+      "category": "transport"
+    },
+    "warped_door": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "warped_fence": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "warped_fence_gate": {
+      "base_value": 18.0,
+      "category": "building_block"
+    },
+    "warped_fungus": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "warped_fungus_on_a_stick": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "warped_hanging_sign": {
+      "base_value": 30.0,
+      "category": "utility"
+    },
+    "warped_hyphae": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "warped_log": {
+      "base_value": 15.0,
+      "category": "wood"
+    },
+    "warped_nylium": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "warped_planks": {
+      "base_value": 10.0,
+      "category": "planks"
+    },
+    "warped_pressure_plate": {
+      "base_value": 10.0,
+      "category": "redstone"
+    },
+    "warped_roots": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "warped_sign": {
+      "base_value": 20.0,
+      "category": "utility"
+    },
+    "warped_slab": {
+      "base_value": 6.0,
+      "category": "building_block"
+    },
+    "warped_stairs": {
+      "base_value": 12.0,
+      "category": "building_block"
+    },
+    "warped_stem": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "warped_stripped_log": {
+      "base_value": 18.0,
+      "category": "wood"
+    },
+    "warped_stripped_wood": {
+      "base_value": 22.0,
+      "category": "wood"
+    },
+    "warped_trapdoor": {
+      "base_value": 20.0,
+      "category": "building_block"
+    },
+    "warped_wart_block": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "warped_wood": {
+      "base_value": 20.0,
+      "category": "wood"
+    },
+    "water_bucket": {
+      "base_value": 20.0,
+      "category": "miscellaneous"
+    },
+    "waxed_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "waxed_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "waxed_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "waxed_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "waxed_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "waxed_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "waxed_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_cut_copper": {
+      "base_value": 150.0,
+      "category": "equipment"
+    },
+    "waxed_exposed_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "waxed_exposed_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "waxed_oxidized_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "waxed_weathered_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "weathered_copper": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "weathered_copper_block": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "weathered_copper_bulb": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "weathered_copper_chest": {
+      "base_value": 120.0,
+      "category": "building_block"
+    },
+    "weathered_copper_door": {
+      "base_value": 100.0,
+      "category": "building_block"
+    },
+    "weathered_copper_grate": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "weathered_copper_slab": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "weathered_copper_stairs": {
+      "base_value": 50.0,
+      "category": "building_block"
+    },
+    "weathered_copper_trapdoor": {
+      "base_value": 80.0,
+      "category": "building_block"
+    },
+    "weathered_cut_copper_slab": {
+      "base_value": 14.0,
+      "category": "building_block"
+    },
+    "weathered_cut_copper_stairs": {
+      "base_value": 28.0,
+      "category": "building_block"
+    },
+    "weathered_cut_copper_wall": {
+      "base_value": 24.0,
+      "category": "building_block"
+    },
+    "weeping_vines": {
+      "base_value": 40.0,
+      "category": "nether_end"
+    },
+    "wet_sponge": {
+      "base_value": 40.0,
+      "category": "mob_drop"
+    },
+    "wheat": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "wheat_seeds": {
+      "base_value": 20.0,
+      "category": "food_or_farming"
+    },
+    "white_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "white_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "white_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "white_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "white_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "white_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "white_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "white_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "white_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "white_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "white_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "white_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "white_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "white_tulip": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "white_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "wild_armor_trim_smithing_template": {
+      "base_value": 450.0,
+      "category": "rare_loot"
+    },
+    "wind_charge": {
+      "base_value": 20.0,
+      "category": "mob_drop"
+    },
+    "witch_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "wither_rose": {
+      "base_value": 20.0,
+      "category": "plant"
+    },
+    "wither_skeleton_skull": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "wither_skeleton_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "wolf_armor": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "wolf_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "wooden_axe": {
+      "base_value": 20.0,
+      "category": "tool_or_weapon"
+    },
+    "wooden_boots": {
+      "base_value": 24.0,
+      "category": "armor"
+    },
+    "wooden_chestplate": {
+      "base_value": 24.0,
+      "category": "armor"
+    },
+    "wooden_helmet": {
+      "base_value": 24.0,
+      "category": "armor"
+    },
+    "wooden_hoe": {
+      "base_value": 20.0,
+      "category": "tool_or_weapon"
+    },
+    "wooden_leggings": {
+      "base_value": 24.0,
+      "category": "armor"
+    },
+    "wooden_pickaxe": {
+      "base_value": 20.0,
+      "category": "tool_or_weapon"
+    },
+    "wooden_shovel": {
+      "base_value": 20.0,
+      "category": "tool_or_weapon"
+    },
+    "wooden_sword": {
+      "base_value": 20.0,
+      "category": "tool_or_weapon"
+    },
+    "writable_book": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "written_book": {
+      "base_value": 120.0,
+      "category": "equipment"
+    },
+    "yellow_banner": {
+      "base_value": 50.0,
+      "category": "decoration"
+    },
+    "yellow_bed": {
+      "base_value": 80.0,
+      "category": "utility"
+    },
+    "yellow_bundle": {
+      "base_value": 60.0,
+      "category": "storage"
+    },
+    "yellow_candle": {
+      "base_value": 20.0,
+      "category": "decoration"
+    },
+    "yellow_carpet": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "yellow_concrete": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "yellow_concrete_powder": {
+      "base_value": 25.0,
+      "category": "building_block"
+    },
+    "yellow_dye": {
+      "base_value": 15.0,
+      "category": "crafting_material"
+    },
+    "yellow_glazed_terracotta": {
+      "base_value": 40.0,
+      "category": "building_block"
+    },
+    "yellow_shulker_box": {
+      "base_value": 800.0,
+      "category": "storage"
+    },
+    "yellow_stained_glass": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "yellow_stained_glass_pane": {
+      "base_value": 15.0,
+      "category": "building_block"
+    },
+    "yellow_terracotta": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "yellow_wool": {
+      "base_value": 30.0,
+      "category": "building_block"
+    },
+    "zoglin_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "zombie_head": {
+      "base_value": 800.0,
+      "category": "collectible"
+    },
+    "zombie_horse_spawn_egg": {
+      "base_value": 0.0,
+      "category": "unobtainable_or_special"
+    },
+    "zombie_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    },
+    "zombie_villager_spawn_egg": {
+      "base_value": 0.0,
+      "category": "spawn_egg",
+      "notes": "Creative/admin item; excluded from survival economy by default."
+    }
+  },
+  "enchantment_rules": {
+    "calculation": "Add each applicable enchantment's bonus_per_level multiplied by its level to the item's base_value. Curse bonuses are negative. Do not apply rules to incompatible item types.",
+    "rounding": "Round final value to 2 decimal places.",
+    "enchantments": {
+      "aqua_affinity": {
+        "max_level": 1,
+        "bonus_per_level": 80.0
+      },
+      "bane_of_arthropods": {
+        "max_level": 5,
+        "bonus_per_level": 35.0
+      },
+      "blast_protection": {
+        "max_level": 4,
+        "bonus_per_level": 35.0
+      },
+      "breach": {
+        "max_level": 4,
+        "bonus_per_level": 100.0
+      },
+      "channeling": {
+        "max_level": 1,
+        "bonus_per_level": 180.0
+      },
+      "curse_of_binding": {
+        "max_level": 1,
+        "bonus_per_level": -80.0
+      },
+      "curse_of_vanishing": {
+        "max_level": 1,
+        "bonus_per_level": -120.0
+      },
+      "density": {
+        "max_level": 5,
+        "bonus_per_level": 70.0
+      },
+      "depth_strider": {
+        "max_level": 3,
+        "bonus_per_level": 50.0
+      },
+      "efficiency": {
+        "max_level": 5,
+        "bonus_per_level": 50.0
+      },
+      "feather_falling": {
+        "max_level": 4,
+        "bonus_per_level": 40.0
+      },
+      "fire_aspect": {
+        "max_level": 2,
+        "bonus_per_level": 70.0
+      },
+      "fire_protection": {
+        "max_level": 4,
+        "bonus_per_level": 30.0
+      },
+      "flame": {
+        "max_level": 1,
+        "bonus_per_level": 100.0
+      },
+      "fortune": {
+        "max_level": 3,
+        "bonus_per_level": 140.0
+      },
+      "frost_walker": {
+        "max_level": 2,
+        "bonus_per_level": 80.0
+      },
+      "impaling": {
+        "max_level": 5,
+        "bonus_per_level": 60.0
+      },
+      "infinity": {
+        "max_level": 1,
+        "bonus_per_level": 300.0
+      },
+      "knockback": {
+        "max_level": 2,
+        "bonus_per_level": 50.0
+      },
+      "looting": {
+        "max_level": 3,
+        "bonus_per_level": 120.0
+      },
+      "loyalty": {
+        "max_level": 3,
+        "bonus_per_level": 80.0
+      },
+      "luck_of_the_sea": {
+        "max_level": 3,
+        "bonus_per_level": 100.0
+      },
+      "lure": {
+        "max_level": 3,
+        "bonus_per_level": 70.0
+      },
+      "mending": {
+        "max_level": 1,
+        "bonus_per_level": 350.0
+      },
+      "multishot": {
+        "max_level": 1,
+        "bonus_per_level": 120.0
+      },
+      "piercing": {
+        "max_level": 4,
+        "bonus_per_level": 50.0
+      },
+      "power": {
+        "max_level": 5,
+        "bonus_per_level": 60.0
+      },
+      "projectile_protection": {
+        "max_level": 4,
+        "bonus_per_level": 30.0
+      },
+      "protection": {
+        "max_level": 4,
+        "bonus_per_level": 40.0
+      },
+      "punch": {
+        "max_level": 2,
+        "bonus_per_level": 50.0
+      },
+      "quick_charge": {
+        "max_level": 3,
+        "bonus_per_level": 70.0
+      },
+      "respiration": {
+        "max_level": 3,
+        "bonus_per_level": 50.0
+      },
+      "riptide": {
+        "max_level": 3,
+        "bonus_per_level": 120.0
+      },
+      "sharpness": {
+        "max_level": 5,
+        "bonus_per_level": 60.0
+      },
+      "silk_touch": {
+        "max_level": 1,
+        "bonus_per_level": 220.0
+      },
+      "smite": {
+        "max_level": 5,
+        "bonus_per_level": 45.0
+      },
+      "soul_speed": {
+        "max_level": 3,
+        "bonus_per_level": 70.0
+      },
+      "sweeping": {
+        "max_level": 3,
+        "bonus_per_level": 50.0
+      },
+      "sweeping_edge": {
+        "max_level": 3,
+        "bonus_per_level": 50.0
+      },
+      "swift_sneak": {
+        "max_level": 3,
+        "bonus_per_level": 90.0
+      },
+      "thorns": {
+        "max_level": 3,
+        "bonus_per_level": 60.0
+      },
+      "unbreaking": {
+        "max_level": 3,
+        "bonus_per_level": 70.0
+      },
+      "wind_burst": {
+        "max_level": 3,
+        "bonus_per_level": 180.0
+      }
+    },
+    "compatibility_groups": {
+      "armor": [
+        "protection",
+        "fire_protection",
+        "blast_protection",
+        "projectile_protection",
+        "thorns",
+        "unbreaking",
+        "mending",
+        "binding_curse",
+        "vanishing_curse"
+      ],
+      "boots": [
+        "feather_falling",
+        "depth_strider",
+        "frost_walker",
+        "soul_speed",
+        "swift_sneak",
+        "protection",
+        "unbreaking",
+        "mending"
+      ],
+      "helmet": [
+        "respiration",
+        "aqua_affinity",
+        "protection",
+        "unbreaking",
+        "mending"
+      ],
+      "sword": [
+        "sharpness",
+        "smite",
+        "bane_of_arthropods",
+        "knockback",
+        "fire_aspect",
+        "looting",
+        "sweeping_edge",
+        "unbreaking",
+        "mending"
+      ],
+      "pickaxe": [
+        "efficiency",
+        "silk_touch",
+        "fortune",
+        "unbreaking",
+        "mending"
+      ],
+      "axe": [
+        "efficiency",
+        "silk_touch",
+        "fortune",
+        "sharpness",
+        "smite",
+        "unbreaking",
+        "mending"
+      ],
+      "shovel": [
+        "efficiency",
+        "silk_touch",
+        "fortune",
+        "unbreaking",
+        "mending"
+      ],
+      "hoe": [
+        "efficiency",
+        "silk_touch",
+        "fortune",
+        "unbreaking",
+        "mending"
+      ],
+      "bow": [
+        "power",
+        "punch",
+        "flame",
+        "infinity",
+        "unbreaking",
+        "mending"
+      ],
+      "crossbow": [
+        "multishot",
+        "quick_charge",
+        "piercing",
+        "unbreaking",
+        "mending"
+      ],
+      "fishing_rod": [
+        "luck_of_the_sea",
+        "lure",
+        "unbreaking",
+        "mending"
+      ],
+      "trident": [
+        "loyalty",
+        "impaling",
+        "riptide",
+        "channeling",
+        "unbreaking",
+        "mending"
+      ],
+      "mace": [
+        "density",
+        "breach",
+        "wind_burst",
+        "unbreaking",
+        "mending"
+      ],
+      "elytra": [
+        "unbreaking",
+        "mending",
+        "binding_curse",
+        "vanishing_curse"
+      ],
+      "book": [
+        "protection",
+        "fire_protection",
+        "blast_protection",
+        "projectile_protection",
+        "feather_falling",
+        "thorns",
+        "respiration",
+        "aqua_affinity",
+        "depth_strider",
+        "frost_walker",
+        "soul_speed",
+        "swift_sneak",
+        "sharpness",
+        "smite",
+        "bane_of_arthropods",
+        "knockback",
+        "fire_aspect",
+        "looting",
+        "sweeping_edge",
+        "efficiency",
+        "silk_touch",
+        "fortune",
+        "unbreaking",
+        "mending",
+        "power",
+        "punch",
+        "flame",
+        "infinity",
+        "luck_of_the_sea",
+        "lure",
+        "loyalty",
+        "impaling",
+        "riptide",
+        "channeling",
+        "multishot",
+        "quick_charge",
+        "piercing",
+        "density",
+        "breach",
+        "wind_burst",
+        "curse_of_binding",
+        "curse_of_vanishing",
+        "sweeping"
+      ]
+    }
+  }
+}

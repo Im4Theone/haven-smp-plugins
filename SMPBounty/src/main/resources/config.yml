@@ -1,0 +1,28 @@
+# SMP-Bounty: put money on a player's head. Whoever kills them gets all of it. Texts use MiniMessage.
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 1
+
+# The smallest bounty one /bounty set can add (a number of the server currency), and the tax taken on top of it when you set one.
+min-amount: 1000
+tax-percent: 10
+
+messages:
+  set: "<#F87171><bold>BOUNTY</bold> <white><setter> put <#FBBF24><amount></#FBBF24> on <#F87171><target></#F87171>'s head. Total: <#FBBF24><total></#FBBF24>."
+  claimed: "<#F87171><bold>BOUNTY</bold> <white><killer> killed <#F87171><target></#F87171> and collected <#FBBF24><amount></#FBBF24>!"
+  on-you: "<red>There is a <#FBBF24><total></#FBBF24> bounty on your head!"
+  own-claim: "<red>You put money on that bounty yourself, so you can't collect it."
+  claimed-you: "<white>You received your bounty reward: <#FBBF24><amount></#FBBF24>."
+  own-bounty: "<red>You can't put a bounty on yourself."
+  too-low: "<red>The smallest bounty is <white><min></white>."
+  bad-amount: "<red>That is not an amount. Use for example 5000, 2.5k or 1m."
+  unknown-player: "<red>I don't know a player called <white><name></white>."
+  not-enough-money: "<red>You need <white><cost></white> (the bounty plus <white><tax></white> tax)."
+  payment-unsure: "<red>The payment could not be confirmed, so nothing was set. Check your balance and tell an admin if money is missing."
+  failed: "<red>That did not work. Nothing was changed."
+  none: "<gray>There are no bounties right now."
+  header: "<#F87171><bold>BOUNTIES</bold>"
+  line: "<#FBBF24>#<rank></#FBBF24> <white><target></white> <gray>-</gray> <#FBBF24><total></#FBBF24>"
+  check: "<white><target> has a bounty of <#FBBF24><total></#FBBF24>."
+  check-none: "<white><target> has no bounty."
+  payout-later: "<yellow>Your bounty payment could not be made right now; you get it shortly."
+  usage: "<red>Usage: /bounty <set <player> <amount> | list | check <player>>"

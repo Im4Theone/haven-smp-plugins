@@ -1,0 +1,30 @@
+# SMP-Economy configuration
+#
+# Apply changes with "/eco reload". The whole file is validated first; if anything is invalid the
+# reload is rejected and the previously active settings stay in effect. Missing keys use the defaults
+# shown here.
+#
+# Write money amounts as quoted text, e.g. "100.00". Unquoted decimals are read by YAML as binary
+# floating point, which can silently change large values. Amounts may have at most 2 decimal places and
+# must be below 1,000,000,000,000,000.00 (the absolute storage limit).
+
+currency:
+  # Shown in front of amounts, e.g. $1,234.50. Plain text (not MiniMessage), 1-8 characters.
+  symbol: "$"
+
+balances:
+  # Balance given to a player's account the first time they join. Applies to new accounts only.
+  starting: "10000.00"
+  # The highest balance a deposit, payment or /eco add may bring an account to. Lowering it never
+  # reduces balances that are already higher; those accounts simply cannot receive more until they spend.
+  maximum: "1000000000000.00"
+
+transactions:
+  # The largest single payment, deposit or withdrawal through /pay or the plugin API.
+  # Administrative /eco add, take and set are not limited by this (only by balances.maximum).
+  maximum-amount: "1000000000.00"
+
+logging:
+  # Extra diagnostic output in the console, including individual transactions (logged at INFO with a
+  # [DEBUG] marker). Leave off in normal operation. Administrative /eco changes are always logged.
+  debug: false

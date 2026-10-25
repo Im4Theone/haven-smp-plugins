@@ -1,0 +1,38 @@
+name: SMP-Stats
+version: '${version}'
+main: net.kaloyan.smpstats.SMPStatsPlugin
+api-version: '1.21.11'
+description: Kills, deaths, playtime and more, with leaderboards.
+authors: [Kaloyan]
+depend: [SMP-Core, SMP-Economy]
+softdepend: [SMP-Shop]
+commands:
+  leaderboard:
+    description: Open the leaderboards.
+    aliases: [lb, leaderboards, top]
+    usage: /<command> [money|kills|deaths|playtime|blocks|mobs|shards]
+  stats:
+    description: Show your stats or another player's.
+    aliases: [stat]
+    usage: /<command> [player]
+  baltop:
+    description: The richest players.
+    usage: /<command>
+  killtop:
+    description: The players with the most kills.
+    usage: /<command>
+  deathtop:
+    description: The players with the most deaths.
+    usage: /<command>
+  playtop:
+    description: The players with the most playtime.
+    usage: /<command>
+  blocktop:
+    description: The players who mined the most blocks.
+    usage: /<command>
+  mobtop:
+    description: The players who killed the most mobs.
+    usage: /<command>
+  shardtop:
+    description: The players with the most shards.
+    usage: /<command>

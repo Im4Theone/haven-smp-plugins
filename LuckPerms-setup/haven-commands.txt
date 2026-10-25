@@ -1,0 +1,51 @@
+creategroup settler
+creategroup keeper
+creategroup beacon
+creategroup lookout
+creategroup warden
+creategroup guardian
+creategroup founder
+group default setweight 1
+group settler setweight 10
+group keeper setweight 20
+group beacon setweight 30
+group lookout setweight 40
+group warden setweight 50
+group guardian setweight 100
+group founder setweight 200
+group settler parent add default
+group keeper parent add settler
+group beacon parent add keeper
+group lookout parent add beacon
+group warden parent add lookout
+group guardian parent add warden
+group founder parent add guardian
+group default meta setprefix 1 "&#9CA3AFWanderer"
+group settler meta setprefix 10 "&#4ADE80&lSettler"
+group keeper meta setprefix 20 "&#FBBF24&lKeeper"
+group beacon meta setprefix 30 "&#38BDF8&lBeacon"
+group lookout meta setprefix 40 "&#5EEAD4&lLookout"
+group warden meta setprefix 50 "&#60A5FA&lWarden"
+group guardian meta setprefix 100 "&#FB923C&lGuardian"
+group founder meta setprefix 200 "&#F87171&lFounder"
+group default permission set bukkit.command.plugins false
+group default permission set bukkit.command.version false
+group default permission set bukkit.command.about false
+group settler permission set donutauction.limit.10 true
+group keeper permission set donutauction.limit.25 true
+group keeper permission set donutauction.slots.25 true
+group beacon permission set donutauction.limit.50 true
+group beacon permission set donutauction.slots.50 true
+group lookout permission set smpeconomy.balance.others true
+group warden permission set donutauction.admin true
+group warden permission set smpmarket.admin.inspect true
+group warden permission set smpmarket.admin.cancel true
+group guardian permission set smpcore.admin true
+group guardian permission set smpcore.info true
+group guardian permission set smpeconomy.admin true
+group guardian permission set smpmarket.admin true
+group guardian permission set donutshop.admin true
+group guardian permission set orders.admin true
+group guardian permission set ispawners.admin true
+group guardian permission set smpscoreboard.admin true
+group founder permission set * true

@@ -1,0 +1,72 @@
+# Do not change config-version. A config with an older number is renamed to config.old-<time>.yml and replaced.
+config-version: 3
+
+# SMP-RTP configuration. Apply changes with "/rtp reload" (an invalid file is rejected and the old settings stay).
+#
+# Messages use MiniMessage. Placeholders: <world> <x> <y> <z> <seconds> <cost>
+
+# Seconds between two random teleports of one player (permission smprtp.bypass.cooldown skips it).
+cooldown-seconds: 60
+# Seconds EVERY player (ops too) must stand still before being teleported; moving or taking damage cancels.
+warmup-seconds: 5
+# Never teleport anyone into an area protected by SMP-Protect (a region that denies building). Needs SMP-Protect.
+avoid-protected-regions: true
+# What a plain /rtp does: overworld, nether or end.
+default-world: overworld
+
+search:
+  # Each round loads this many random spots in parallel and uses the first safe one.
+  candidates-per-round: 6
+  # How many rounds before giving up ("no safe spot found, try again").
+  rounds: 8
+
+# The world name must match a loaded world exactly. The search area is a square of `size` blocks per side around the centre (5000 = 2500 blocks each way);
+# min-radius keeps spots at least that far from the centre (0 = anywhere).
+# The world border is respected. cost needs Vault and an economy; 0 = free.
+worlds:
+  overworld:
+    enabled: true
+    world: world
+    center-x: 0
+    center-z: 0
+    min-radius: 500
+    size: 5000
+    cost: 0
+  nether:
+    enabled: true
+    world: world_nether
+    center-x: 0
+    center-z: 0
+    min-radius: 200
+    size: 5000
+    # Only ground between these heights is used (the nether roof is at 127; below 32 is lava ocean territory).
+    min-y: 32
+    max-y: 120
+    cost: 0
+  end:
+    enabled: true
+    world: world_the_end
+    center-x: 0
+    center-z: 0
+    # The main island is about 100 blocks wide; the outer islands start roughly 1000 blocks out.
+    min-radius: 1200
+    size: 5000
+    min-y: 0
+    max-y: 120
+    cost: 0
+
+messages:
+  searching: "<#9CA3AF>Looking for a safe spot..."
+  warmup: "<#38BDF8>Teleporting in <white><seconds></white>... <#9CA3AF>stand still"
+  success: "<#4ADE80>Teleported to <white><x> <y> <z></white> <#9CA3AF>(<world>)"
+  cooldown: "<#F87171>You can use /rtp again in <white><seconds></white> seconds."
+  busy: "<#F87171>You are already being teleported."
+  cancelled-move: "<#F87171>Teleport cancelled: you moved."
+  cancelled-damage: "<#F87171>Teleport cancelled: you took damage."
+  no-spot: "<#F87171>No safe spot found. Try again."
+  no-world: "<#F87171>The <world> world is not available right now."
+  disabled: "<#F87171>Random teleport in the <world> is switched off."
+  no-permission-world: "<#F87171>You can't random teleport to the <world>."
+  cost-failed: "<#F87171>You need <white><cost></white> to do that."
+  cost-unavailable: "<#F87171>The economy is not available right now, nothing was charged."
+  teleport-failed: "<#F87171>The teleport failed. Any payment was refunded."

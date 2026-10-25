@@ -1,0 +1,68 @@
+# SMP-Scoreboard configuration
+#
+# Apply changes with "/scoreboard reload". The file is validated first; if anything is invalid the reload is rejected
+# and the previous settings stay in effect.
+#
+# Text uses MiniMessage: <#RRGGBB>, <bold>, <gradient:#FF6B4A:#FFB347>...</gradient>, <white>, <dark_gray> ...
+# Placeholders for the lines (inserted as plain text):
+#   <name> <money> <shards> <kills> <deaths> <streak> <rank> <playtime> <online> <ping> <crates> <crate_timer> <keyall>
+# <keyall> (same as <crate_timer>) is the countdown to the next keyall of SMP-Crates, e.g. 59:12; when it reaches 00:00 everybody
+# online gets a key and it starts again at 60:00. <crates> is how many crates you hold. Both show 0 and - without SMP-Crates.
+# <money> is compact (950, 10k, 1.2m); <shards> comes from DonutShop; <rank> is the LuckPerms prefix, or the group name.
+
+scoreboard:
+  title: "<bold><gradient:#FF6B4A:#FFB347>ECONOMY</gradient></bold>"
+  # How often the sidebar refreshes (20 ticks = 1 second). 5-200.
+  update-ticks: 20
+  # Top to bottom, at most 15 lines. An empty line "" is a blank row.
+  lines:
+    - "<#FF6B4A><name>"
+    - "<#34D399>$ <white>Money: <#4ADE80><money>"
+    - "<#5EEAD4>✦ <white>Shards: <#5EEAD4><shards>"
+    - "<#F87171>⚔ <white>Kills: <#FB923C><kills>"
+    - "<#FB923C>☠ <white>Deaths: <#FB923C><deaths>"
+    - "<#4ADE80>⚡ <white>Streak: <#4ADE80><streak>"
+    - "<#FBBF24>🔑 <white>Keyall: <#FBBF24><keyall>"
+    - ""
+    - "<#38BDF8>★ <white>Rank: <rank>"
+    - "<#FBBF24>⌛ <white>Playtime: <#FBBF24><playtime>"
+    - "<#9CA3AF>● <white>Online: <#9CA3AF><online> <dark_gray>| <white><ping>ms"
+
+# Title shown on join; it fades out after stay-ms. Tag: <name>
+welcome:
+  enabled: true
+  title: "<bold><gradient:#38BDF8:#5EEAD4>Welcome, <name></gradient></bold>"
+  subtitle: "<#9CA3AF>to Haven SMP"
+  fade-in-ms: 300
+  stay-ms: 1750
+  fade-out-ms: 500
+
+# Tab list: header, footer, prefixed names and rank ordering (LuckPerms gives the prefixes and the ordering).
+# Placeholders: <name> <online> <max> <ping> <tps>  (<ping> and <tps> are coloured by how good they are)
+# name-format tags: <prefix> <name>
+tab:
+  enabled: true
+  header:
+    - ""
+    - "<bold><#38BDF8>HAVEN SMP</bold>"
+    - "<bold><#9CA3AF>SURVIVAL</bold>"
+    - ""
+    - "<#38BDF8>Online: <white><online> <dark_gray>| <#4ADE80>Max: <white><max>"
+    - ""
+  footer:
+    - ""
+    - "<#38BDF8>Ping: <ping><white>ms <dark_gray>| <#4ADE80>TPS: <tps>"
+    - ""
+  name-format: "<prefix><name>"
+  # Higher LuckPerms groups are listed first.
+  sort-by-rank: true
+
+# Chat formatted with the LuckPerms prefix (needs LuckPerms). Tags: <prefix> <name> <message>
+chat:
+  enabled: true
+  format: "<prefix><name><dark_gray> » <white><message>"
+
+# Join and leave messages. Tag: <name>. Leave a message empty ("") to keep the server's default one.
+messages:
+  join: "<green><bold>+</bold> <white><name> <green><bold>ʜᴀꜱ ᴊᴏɪɴᴇᴅ</bold>"
+  quit: "<red><bold>-</bold> <white><name> <red><bold>ʜᴀꜱ ʟᴇꜰᴛ</bold>"

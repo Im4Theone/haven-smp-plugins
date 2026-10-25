@@ -1,0 +1,97 @@
+# SMP-Auth: players with a bought Minecraft account walk in; the others register and log in with a password.
+# Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 2
+
+# HOW IT WORKS
+# - The server must run with online-mode=false in server.properties (so players without a bought account can join) and
+#   enforce-secure-profile=false.
+# - Players with a BOUGHT account do not need a password: SMP-Auth asks their game to prove the account to Mojang (the same check an
+#   online-mode server does) and gives them their real UUID and skin. No other plugin (FastLogin, ProtocolLib) is needed.
+#   * A name that a bought account has can only be used by that account. Players who already registered here with a password keep
+#     logging in with it; they type /premium once to switch to the bought-account check.
+#   * Everybody else registers and logs in with a password.
+premium:
+  # Turn the bought-account check on or off. Off = every player registers and logs in.
+  verify: true
+  # Look up unknown names with Mojang, so new players with a bought account never need /premium. Players whose name is free (or who
+  # already registered here) are not asked anything. If Mojang can't be reached a new name can't join (it would be unsafe to guess).
+  auto-detect: true
+  # Skip the password for verified players.
+  auto-login: true
+  # A player without a bought account can't use a name that a bought account was seen with.
+  protect-names: true
+  # Seconds Mojang and the game get to answer.
+  timeout-seconds: 10
+  # Mojang's addresses (only change them for testing).
+  lookup-url: "https://api.minecraftservices.com/minecraft/profile/lookup/name/"
+  session-url: "https://sessionserver.mojang.com/session/minecraft/hasJoined"
+
+password:
+  min-length: 8
+  max-length: 64
+
+registration:
+  # How many accounts may last have logged in from one internet address (stops people making dozens of accounts). 0 = no limit.
+  max-accounts-per-ip: 3
+
+login:
+  # Seconds a player has to register or log in before they are kicked.
+  timeout-seconds: 60
+  # Wrong passwords before the player is kicked, and before the name and the address are locked.
+  max-attempts: 5
+  lock-minutes: 10
+  # Blindness until logged in (so nothing can be seen or done before).
+  blindness: true
+
+session:
+  # A player who logs back in from the same address within this many minutes does not need the password again. 0 = off.
+  # Operators and players with smpauth.admin never get this.
+  minutes: 10
+
+messages:
+  register-prompt: "<#00F986><bold>WELCOME!</bold> <white>Create your account with <#FBBF24>/register <password> <password></#FBBF24>"
+  login-prompt: "<#00F986><bold>WELCOME BACK!</bold> <white>Log in with <#FBBF24>/login <password></#FBBF24>"
+  title-register: "<#00F986>Register"
+  title-login: "<#00F986>Log in"
+  subtitle-register: "<gray>/register <password> <password>"
+  subtitle-login: "<gray>/login <password>"
+  premium: "<green>You were verified as a bought account and logged in automatically."
+  session: "<green>Welcome back, you were logged in automatically."
+  registered: "<green>Your account was created and you are logged in. <gray>Remember your password!"
+  logged-in: "<green>You are logged in."
+  logged-out: "<yellow>You logged out. Log in again with <#FBBF24>/login <password></#FBBF24>."
+  password-changed: "<green>Your password was changed."
+  unregistered: "<yellow>Your account was deleted."
+  not-registered: "<red>You have no account yet. Use <#FBBF24>/register <password> <password></#FBBF24>."
+  already-registered: "<red>You already have an account. Use <#FBBF24>/login <password></#FBBF24>."
+  already-logged-in: "<red>You are already logged in."
+  not-logged-in: "<red>Log in or register first."
+  wrong-password: "<red>Wrong password. <gray>(<left> attempts left)"
+  too-many-attempts: "<red>Too many wrong passwords."
+  locked: "<red>Too many wrong passwords. Try again in <white><minutes></white> minutes."
+  mismatch: "<red>The two passwords are not the same."
+  too-short: "<red>Your password must be at least <white><min></white> characters."
+  too-long: "<red>Your password can be at most <white><max></white> characters."
+  same-as-name: "<red>Your password can't be your name."
+  too-common: "<red>That password is far too common. Choose another one."
+  bad-characters: "<red>Your password can't contain spaces."
+  too-many-accounts: "<red>Too many accounts were made from your address."
+  timeout: "<red>You took too long to log in."
+  busy: "<red>One moment, I am still checking."
+  premium-name: "<red>This name belongs to a bought Minecraft account, and yours could not be proven. Join with that account, or choose another name."
+  wrong-case: "<red>You registered as <white><name></white> (with those capitals). Join with exactly that name."
+  invalid-name: "<red>Your name may only have letters, numbers and underscores (3-16 characters)."
+  commands-locked: "<red>Log in first: <#FBBF24>/login <password></#FBBF24> or <#FBBF24>/register <password> <password></#FBBF24>."
+  usage-register: "<red>Usage: /register <password> <password>"
+  usage-login: "<red>Usage: /login <password>"
+  usage-change: "<red>Usage: /changepassword <old password> <new password>"
+  usage-unregister: "<red>Usage: /unregister <password>"
+  verify-error: "<red>Your account could not be checked with Mojang right now. <gray>Try again in a minute."
+  verify-busy: "<red>Too many names were checked from your address. Try again in a minute."
+  premium-set: "<green>Done! From your next join with your <white>bought account</white> you walk in without a password. <gray>(Joining without one will not work any more.)"
+  premium-already: "<yellow>Your account is already checked with Mojang."
+  premium-none: "<red>There is no bought Minecraft account called <white><name></white>."
+  premium-error: "<red>Mojang could not be reached. Try again in a minute."
+  premium-off: "<red>The bought-account check is not running on this server."
+  save-failed: "<red>That could not be saved, so nothing was changed."

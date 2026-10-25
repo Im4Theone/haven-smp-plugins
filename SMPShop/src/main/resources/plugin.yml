@@ -1,0 +1,22 @@
+name: SMP-Shop
+version: '${version}'
+main: net.kaloyan.smpshop.SMPShopPlugin
+api-version: '1.21.11'
+description: Items for money, keys and spawners for Shards.
+authors: [Kaloyan]
+depend: [Vault, SMP-VaultBridge]
+softdepend: [SMP-Crates, SMP-Spawners]
+commands:
+  shop:
+    description: Open the shop.
+    usage: /<command>
+  shards:
+    description: Show your shards (administrators can give, take or set them).
+    usage: /<command> [give|take|set <player> <amount>]
+permissions:
+  smpshop.admin:
+    description: Give, take or set shards.
+    default: op
+  donutshop.admin:
+    description: Same as smpshop.admin (the permission of the old DonutShop).
+    default: op

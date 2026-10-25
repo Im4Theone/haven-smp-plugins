@@ -1,0 +1,111 @@
+# SMP-Shop. Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 3
+
+titles:
+  main: "<gradient:#00F986:#5EEAD4>ꜱʜᴏᴘ</gradient>"
+  shards: "<gradient:#A303F9:#5EEAD4>ꜱʜᴏᴘ - ꜱʜᴀʀᴅꜱ</gradient>"
+  shard-name: "<#A303F9>ꜱʜᴀʀᴅ ꜱʜᴏᴘ"
+  back: "<#fd0100>Back"
+  cancel: "<#fd0100>Cancel"
+  confirm: "<#01fc01>Confirm"
+
+messages:
+  bought-item: "<white>You bought <#00a4fc><amount> <item></#00a4fc> for <#00fc00><price></#00fc00>"
+  bought-offer: "<white>You bought <#00a4fc><amount> <item></#00a4fc> for <#5EEAD4><price></#5EEAD4>"
+  not-enough-money: "<red>You don't have enough money."
+  not-enough-shards: "<red>You don't have enough shards."
+  inventory-full: "<red>Your inventory is full. You were not charged."
+  payment-unsure: "<red>The payment could not be confirmed. You were not given the item; check your balance and tell an admin."
+  unavailable: "<red>That is unavailable right now. You were not charged."
+  shard-found: "<white>You found <#5EEAD4>1 Shard</#5EEAD4>! You now have <#5EEAD4><total></#5EEAD4>."
+  shards-balance: "<white>You have <#5EEAD4><shards> Shards</#5EEAD4>."
+
+# Shards: the currency of the shard shop (separate from money).
+shards:
+  # Every this many minutes each online player rolls for a shard.
+  interval-minutes: 10
+  # Chance (0-100) that a roll gives exactly 1 shard. 100 = everyone gets one every interval.
+  chance-percent: 50
+
+# The money shop. Prices are for ONE item. slot is the place on the main menu (0-26). Up to 36 items per category.
+categories:
+  end:
+    title: "<#00F986>ꜱʜᴏᴘ - ᴇɴᴅ"
+    name: "<#00F986>ᴇɴᴅ"
+    icon: END_STONE
+    slot: 11
+    items:
+      - {item: ENDER_CHEST, price: 40}
+      - {item: ENDER_PEARL, price: 20}
+      - {item: END_STONE, price: 40}
+      - {item: DRAGON_BREATH, price: 50}
+      - {item: END_ROD, price: 40}
+      - {item: CHORUS_FRUIT, price: 25}
+      - {item: POPPED_CHORUS_FRUIT, price: 25}
+      - {item: SHULKER_SHELL, price: 450}
+      - {item: SHULKER_BOX, price: 40}
+  nether:
+    title: "<#00F986>ꜱʜᴏᴘ - ɴᴇᴛʜᴇʀ"
+    name: "<#00F986>ɴᴇᴛʜᴇʀ"
+    icon: NETHERRACK
+    slot: 12
+    items:
+      - {item: BLAZE_ROD, price: 40}
+      - {item: NETHER_WART, price: 50}
+      - {item: GLOWSTONE_DUST, price: 50}
+      - {item: MAGMA_CREAM, price: 50}
+      - {item: GHAST_TEAR, price: 40}
+      - {item: QUARTZ, price: 250}
+      - {item: SOUL_SAND, price: 15}
+      - {item: MAGMA_BLOCK, price: 15}
+      - {item: CRYING_OBSIDIAN, price: 40}
+  gear:
+    title: "<#00F986>ꜱʜᴏᴘ - ɢᴇᴀʀ"
+    name: "<#00F986>ɢᴇᴀʀ"
+    icon: TOTEM_OF_UNDYING
+    slot: 13
+    items:
+      - {item: OBSIDIAN, price: 15}
+      - {item: END_CRYSTAL, price: 20}
+      - {item: RESPAWN_ANCHOR, price: 40}
+      - {item: GLOWSTONE, price: 40}
+      - {item: TOTEM_OF_UNDYING, price: 12500}
+      - {item: ENDER_PEARL, price: 20}
+      - {item: GOLDEN_APPLE, price: 350}
+      - {item: EXPERIENCE_BOTTLE, price: 20}
+      - {item: ARROW, price: 120}
+  food:
+    title: "<#00F986>ꜱʜᴏᴘ - ꜰᴏᴏᴅ"
+    name: "<#00F986>ꜰᴏᴏᴅ"
+    icon: COOKED_BEEF
+    slot: 14
+    items:
+      - {item: POTATO, price: 20}
+      - {item: SWEET_BERRIES, price: 20}
+      - {item: MELON_SLICE, price: 20}
+      - {item: CARROT, price: 20}
+      - {item: APPLE, price: 20}
+      - {item: COOKED_CHICKEN, price: 25}
+      - {item: COOKED_BEEF, price: 25}
+      - {item: GOLDEN_CARROT, price: 50}
+      - {item: GOLDEN_APPLE, price: 350}
+
+# The shard shop. Keys need SMP-Crates (id = the crate id), spawners need SMP-Spawners (creature = a creature in its config).
+# At most 5 keys and 9 spawners. Prices are whole shards.
+shard-shop:
+  keys:
+    - {id: common, name: "<#9CA3AF>Common Key", icon: TRIPWIRE_HOOK, price: 200}
+    - {id: prime, name: "<#38BDF8>Prime Key", icon: TRIPWIRE_HOOK, price: 1500}
+    - {id: gold, name: "<#FBBF24>Gold Key", icon: TRIPWIRE_HOOK, price: 1500}
+    - {id: amethyst, name: "<#F472B6>Amethyst Key", icon: TRIPWIRE_HOOK, price: 4000}
+    - {id: crimson, name: "<#F87171>Crimson Key", icon: TRIPWIRE_HOOK, price: 2000}
+  spawners:
+    - {creature: PIG, name: "<white>Pig Spawner", icon: PIG_SPAWN_EGG, price: 250}
+    - {creature: COW, name: "<white>Cow Spawner", icon: COW_SPAWN_EGG, price: 350}
+    - {creature: ZOMBIE, name: "<green>Zombie Spawner", icon: ZOMBIE_SPAWN_EGG, price: 400}
+    - {creature: SPIDER, name: "<dark_gray>Spider Spawner", icon: SPIDER_SPAWN_EGG, price: 750}
+    - {creature: SKELETON, name: "<gray>Skeleton Spawner", icon: SKELETON_SPAWN_EGG, price: 500}
+    - {creature: CREEPER, name: "<dark_green>Creeper Spawner", icon: CREEPER_SPAWN_EGG, price: 625}
+    - {creature: BLAZE, name: "<gold>Blaze Spawner", icon: BLAZE_SPAWN_EGG, price: 1000}
+    - {creature: IRON_GOLEM, name: "<gray>Iron Golem Spawner", icon: IRON_GOLEM_SPAWN_EGG, price: 1500}

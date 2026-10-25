@@ -1,0 +1,43 @@
+# SMP-Market configuration
+#
+# Apply changes with "/market admin reload". The whole file is validated first; if anything is invalid the
+# reload is rejected and the previously active settings stay in effect. If the file is invalid at server
+# start, SMP-Market logs every problem and disables itself. Missing keys use the defaults shown here.
+#
+# Write money amounts as quoted text, e.g. "100.00" (YAML reads unquoted decimals as binary floating point).
+# Amounts have at most 2 decimal places. Currency symbol and formatting come from SMP-Economy; there is
+# intentionally no currency setting here.
+
+listing:
+  # How many listings (active, or being sold) one player may have at once. 1-1000.
+  max-per-player: 10
+  # How long a listing stays on sale before it expires and the item is returned to the seller.
+  # Whole hours, 1-8760 (one year).
+  duration-hours: 72
+  # Price limits for the TOTAL price of a listing. The effective maximum is also capped by SMP-Economy's
+  # transactions.maximum-amount, which is checked when listing and when buying.
+  min-price: "0.01"
+  max-price: "1000000.00"
+  # Allowed stack size of a listed item (items per listing).
+  min-amount: 1
+  max-amount: 64
+
+fee:
+  # Market fee in percent of the price (0-50, at most 2 decimals). Rounded down to the cent.
+  # The seller is paid the full price and the fee is then withdrawn from the seller's account, so the
+  # seller ends up with price minus fee. 0 disables fees.
+  percent: "0"
+
+purchase:
+  # Whether players may buy their own listings.
+  allow-self-purchase: false
+
+restrictions:
+  # Items that cannot be listed. Entries are Bukkit Material names; '*' matches any run of characters,
+  # for example "*_SHULKER_BOX" or "SPAWNER". Every entry must match at least one material (typos are
+  # rejected). Case-insensitive. Empty list = no restrictions.
+  blocked-materials: []
+
+logging:
+  # Extra diagnostic output in the console. Administrative recovery actions are always logged.
+  debug: false

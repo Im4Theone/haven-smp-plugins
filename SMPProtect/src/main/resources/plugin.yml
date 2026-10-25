@@ -1,0 +1,20 @@
+name: SMP-Protect
+version: '${version}'
+main: net.kaloyan.smpprotect.SMPProtectPlugin
+api-version: '1.21.11'
+description: Protects areas of the server with regions and flags (no building, no PvP, no mob spawning...). Hub first.
+authors: [Kaloyan]
+commands:
+  protect:
+    permission: smpprotect.admin
+    permission-message: You do not have permission to do that.
+    description: Define and manage protected regions.
+    aliases: [rg, region]
+    usage: /<command> [wand|define|flag|preset|info|list|remove|...]
+permissions:
+  smpprotect.admin:
+    description: Use /protect and the region wand.
+    default: op
+  smpprotect.bypass:
+    description: Ignore every region (build, break, fight anywhere).
+    default: op

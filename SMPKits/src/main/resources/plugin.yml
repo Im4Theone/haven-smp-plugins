@@ -1,0 +1,44 @@
+name: SMP-Kits
+version: '${version}'
+main: net.kaloyan.smpkits.SMPKitsPlugin
+api-version: '1.21.11'
+description: One kit per rank (the Founder plays too). The admin rank gets no kits.
+authors: [Kaloyan]
+softdepend: [Vault, LuckPerms]
+commands:
+  kit:
+    description: Open the rank kits, or claim one with /kit <name>.
+    aliases: [kits]
+    permission: smpkits.use
+    permission-message: You do not have permission to do that.
+    usage: /<command> [kit name | preview <kit name>]
+  kitadmin:
+    description: Kit administration.
+    permission: smpkits.admin
+    permission-message: You do not have permission to do that.
+    usage: /<command> <list | give <player> <kit> | reset <player> <kit> | reload>
+permissions:
+  smpkits.use:
+    description: See and use /kit. Everybody can; ranks without a kit see their kits locked, Guardian is told the rank gets none.
+    default: true
+  smpkits.admin:
+    description: /kitadmin.
+    default: op
+  smpkits.kit.wanderer:
+    description: The Wanderer kit (every player without a rank, and every rank above).
+    default: true
+  smpkits.kit.settler:
+    description: The Settler kit.
+    default: false
+  smpkits.kit.keeper:
+    description: The Keeper kit.
+    default: false
+  smpkits.kit.beacon:
+    description: The Beacon kit.
+    default: false
+  smpkits.kit.lookout:
+    description: The Lookout kit.
+    default: false
+  smpkits.kit.warden:
+    description: The Warden kit.
+    default: false

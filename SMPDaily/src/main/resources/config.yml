@@ -1,0 +1,25 @@
+# SMP-Daily: a reward every 24 hours with a 7-day streak. Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Claim again within 48 hours of the last claim and the streak goes on; wait longer and it starts again at day 1. After day 7 it starts again.
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 1
+
+# What each day gives (1 to 7 days). money: in the server currency, shards: whole shards, crates: crate id -> how many (needs SMP-Crates).
+days:
+  - {money: 2500, shards: 2}
+  - {money: 3500, shards: 3, crates: {common: 1}}
+  - {money: 5000, shards: 4}
+  - {money: 6500, shards: 5, crates: {common: 2}}
+  - {money: 8000, shards: 6}
+  - {money: 10000, shards: 8, crates: {prime: 1}}
+  - {money: 20000, shards: 25, crates: {gold: 1, common: 3}}
+
+titles:
+  main: "<#00F986>ᴅᴀɪʟʏ ʀᴇᴡᴀʀᴅ"
+
+messages:
+  claimed: "<white>You claimed your <#00F986>day <day></#00F986> reward: <rewards><white>. Streak: <#FBBF24><day></#FBBF24>."
+  wait: "<red>Your next reward is ready in <white><remaining></white>."
+  ready: "<#00F986><bold>DAILY</bold> <white>Your daily reward is ready! Claim it with <#FBBF24>/daily</#FBBF24>."
+  streak-lost: "<yellow>You missed a day, so your streak started again at day 1."
+  payment-failed: "<red>The money could not be paid out right now, so nothing was claimed. Try again in a moment."
+  saved-failed: "<red>That could not be saved, so nothing was claimed."

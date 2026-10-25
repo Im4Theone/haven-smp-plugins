@@ -1,0 +1,33 @@
+name: SMP-Social
+version: '${version}'
+main: net.kaloyan.smpsocial.SMPSocialPlugin
+api-version: '1.21.11'
+description: Private messages, /reply, /ignore, /trash and /afk.
+authors: [Kaloyan]
+commands:
+  msg:
+    description: Send a private message.
+    aliases: [tell, w, whisper, m, t]
+    usage: /<command> <player> <message>
+  reply:
+    description: Answer the last private message.
+    aliases: [r]
+    usage: /<command> <message>
+  ignore:
+    description: Stop seeing a player's chat and messages (again to stop ignoring).
+    aliases: [unignore]
+    usage: /<command> <player | list>
+  trash:
+    description: Open a bin; whatever is inside when you close it is deleted.
+    aliases: [bin, disposal]
+    usage: /<command>
+  afk:
+    description: Mark yourself as away.
+    usage: /<command>
+permissions:
+  smpsocial.unignorable:
+    description: Cannot be ignored (staff).
+    default: op
+  smpsocial.afk.exempt:
+    description: Never marked away automatically.
+    default: false

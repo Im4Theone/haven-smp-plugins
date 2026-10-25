@@ -1,0 +1,12 @@
+name: SMP-Bounty
+version: '${version}'
+main: net.kaloyan.smpbounty.SMPBountyPlugin
+api-version: '1.21.11'
+description: Put money on a player's head; the killer collects it.
+authors: [Kaloyan]
+depend: [Vault, SMP-VaultBridge]
+commands:
+  bounty:
+    description: Set and see bounties.
+    aliases: [bounties]
+    usage: /<command> <set <player> <amount> | list | check <player>>

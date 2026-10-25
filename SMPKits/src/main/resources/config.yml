@@ -1,0 +1,164 @@
+# SMP-Kits: one kit per rank. Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 8
+
+# Players whose main rank (LuckPerms primary group) is listed here get no kits at all: this is the Admin (Guardian) rank.
+# The Founder plays too, so the Founder gets kits.
+excluded-groups: [guardian]
+
+# A kit is available to players with the permission smpkits.kit.<kit id>. Ranks inherit the permissions of the ranks below them in
+# LuckPerms, so a Beacon can also claim the Settler and Keeper kits (the lines to set this up are in LuckPerms-setup/haven-new-plugins.txt).
+# cooldown: how long until the kit can be claimed again (24h for most kits, 3d for the netherite kits Lookout and Warden). A length of time (30m, 12h, 3d, 1w) or "once" for a one-time kit.
+
+titles:
+  main: "<#FBBF24>ʀᴀɴᴋ ᴋɪᴛꜱ"
+  preview: "<#FBBF24>ᴋɪᴛ: <kit>"
+
+messages:
+  claimed: "<white>You claimed the <kit><white>. Next one in <cooldown>."
+  claimed-once: "<white>You claimed the <kit><white>."
+  cooldown: "<red>You can claim the <kit><red> again in <white><remaining></white>."
+  already-once: "<red>You have already claimed the <kit><red>; it can only be claimed once."
+  no-permission: "<red>You don't have access to that kit."
+  excluded: "<red>Your rank gets no kits."
+  unknown: "<red>There is no kit called <white><name></white>."
+  no-space: "<red>You need more room in your inventory (<white><needed></white> more free slot(s)). Nothing was claimed."
+  saved-failed: "<red>That could not be saved, so nothing was claimed."
+  none: "<red>You have no kit available."
+  admin-given: "<green>Gave the <kit><green> to <white><player></white>."
+  admin-reset: "<green>Reset the cooldown of <white><player></white> for <kit><green>."
+  usage: "<red>Usage: <usage>"
+
+kits:
+  wanderer:
+    name: "<#9CA3AF>Wanderer Kit"
+    role: "Wanderer"
+    icon: IRON_CHESTPLATE
+    slot: 10
+    cooldown: 24h
+    items:
+      - {item: IRON_HELMET, enchants: {protection: 2, unbreaking: 2}}
+      - {item: IRON_CHESTPLATE, enchants: {protection: 2, unbreaking: 2}}
+      - {item: IRON_LEGGINGS, enchants: {protection: 2, unbreaking: 2}}
+      - {item: IRON_BOOTS, enchants: {protection: 2, unbreaking: 2}}
+      - {item: IRON_SWORD, enchants: {sharpness: 2, unbreaking: 2}}
+      - {item: IRON_PICKAXE, enchants: {efficiency: 3, unbreaking: 2}}
+      - {item: IRON_AXE, enchants: {efficiency: 3, unbreaking: 2}}
+      - {item: IRON_SHOVEL, enchants: {efficiency: 3, unbreaking: 2}}
+      - {item: COOKED_BEEF, amount: 32}
+      - {item: GOLDEN_CARROT, amount: 16}
+      - {item: TORCH, amount: 64}
+      - {item: OAK_LOG, amount: 32}
+      - {item: EXPERIENCE_BOTTLE, amount: 16}
+  settler:
+    name: "<#4ADE80>Settler Kit"
+    role: "Settler"
+    icon: DIAMOND_CHESTPLATE
+    slot: 11
+    cooldown: 24h
+    items:
+      - {item: DIAMOND_HELMET, enchants: {protection: 2, unbreaking: 3}}
+      - {item: DIAMOND_CHESTPLATE, enchants: {protection: 2, unbreaking: 3}}
+      - {item: DIAMOND_LEGGINGS, enchants: {protection: 2, unbreaking: 3}}
+      - {item: DIAMOND_BOOTS, enchants: {protection: 2, unbreaking: 3, feather_falling: 2}}
+      - {item: DIAMOND_SWORD, enchants: {sharpness: 3, unbreaking: 3}}
+      - {item: DIAMOND_PICKAXE, enchants: {efficiency: 4, unbreaking: 3}}
+      - {item: DIAMOND_AXE, enchants: {efficiency: 4, unbreaking: 3}}
+      - {item: DIAMOND_SHOVEL, enchants: {efficiency: 4, unbreaking: 3}}
+      - {item: COOKED_BEEF, amount: 48}
+      - {item: GOLDEN_CARROT, amount: 32}
+      - {item: GOLDEN_APPLE, amount: 4}
+      - {item: ENDER_PEARL, amount: 8}
+      - {item: EXPERIENCE_BOTTLE, amount: 32}
+  keeper:
+    name: "<#FBBF24>Keeper Kit"
+    role: "Keeper"
+    icon: DIAMOND_SWORD
+    slot: 12
+    cooldown: 24h
+    items:
+      - {item: DIAMOND_HELMET, enchants: {protection: 3, unbreaking: 3, respiration: 2, mending: 1}}
+      - {item: DIAMOND_CHESTPLATE, enchants: {protection: 3, unbreaking: 3, mending: 1}}
+      - {item: DIAMOND_LEGGINGS, enchants: {protection: 3, unbreaking: 3, mending: 1}}
+      - {item: DIAMOND_BOOTS, enchants: {protection: 3, unbreaking: 3, feather_falling: 3, mending: 1}}
+      - {item: DIAMOND_SWORD, enchants: {sharpness: 4, unbreaking: 3, looting: 2, mending: 1}}
+      - {item: DIAMOND_PICKAXE, enchants: {efficiency: 5, unbreaking: 3, fortune: 2, mending: 1}}
+      - {item: DIAMOND_AXE, enchants: {efficiency: 5, sharpness: 4, unbreaking: 3, mending: 1}}
+      - {item: DIAMOND_SHOVEL, enchants: {efficiency: 5, unbreaking: 3, mending: 1}}
+      - {item: SHIELD, enchants: {unbreaking: 3, mending: 1}}
+      - {item: COOKED_BEEF, amount: 64}
+      - {item: GOLDEN_APPLE, amount: 8}
+      - {item: ENDER_PEARL, amount: 16}
+      - {item: EXPERIENCE_BOTTLE, amount: 64}
+  beacon:
+    name: "<#38BDF8>Beacon Kit"
+    role: "Beacon"
+    icon: DIAMOND_PICKAXE
+    slot: 13
+    cooldown: 24h
+    items:
+      - {item: DIAMOND_HELMET, enchants: {protection: 4, unbreaking: 3, respiration: 3, aqua_affinity: 1, mending: 1}}
+      - {item: DIAMOND_CHESTPLATE, enchants: {protection: 4, unbreaking: 3, mending: 1}}
+      - {item: DIAMOND_LEGGINGS, enchants: {protection: 4, unbreaking: 3, mending: 1}}
+      - {item: DIAMOND_BOOTS, enchants: {protection: 4, unbreaking: 3, feather_falling: 4, depth_strider: 3, mending: 1}}
+      - {item: DIAMOND_SWORD, enchants: {sharpness: 5, unbreaking: 3, looting: 3, fire_aspect: 2, mending: 1}}
+      - {item: DIAMOND_PICKAXE, enchants: {efficiency: 5, unbreaking: 3, fortune: 3, mending: 1}}
+      - {item: DIAMOND_AXE, enchants: {efficiency: 5, sharpness: 5, unbreaking: 3, mending: 1}}
+      - {item: DIAMOND_SHOVEL, enchants: {efficiency: 5, unbreaking: 3, mending: 1}}
+      - {item: SHIELD, enchants: {unbreaking: 3, mending: 1}}
+      - {item: BOW, enchants: {power: 5, punch: 2, flame: 1, infinity: 1, unbreaking: 3}}
+      - {item: ARROW, amount: 64}
+      - {item: GOLDEN_APPLE, amount: 16}
+      - {item: ENCHANTED_GOLDEN_APPLE, amount: 2}
+      - {item: ENDER_PEARL, amount: 16}
+      - {item: EXPERIENCE_BOTTLE, amount: 64}
+      - {item: COOKED_BEEF, amount: 64}
+  lookout:
+    name: "<#5EEAD4>Lookout Kit"
+    role: "Lookout"
+    icon: NETHERITE_CHESTPLATE
+    slot: 14
+    cooldown: 3d
+    items:
+      - {item: NETHERITE_HELMET, enchants: {protection: 4, unbreaking: 3, respiration: 3, aqua_affinity: 1, mending: 1}}
+      - {item: NETHERITE_CHESTPLATE, enchants: {protection: 4, unbreaking: 3, thorns: 3, mending: 1}}
+      - {item: NETHERITE_LEGGINGS, enchants: {protection: 4, unbreaking: 3, swift_sneak: 3, mending: 1}}
+      - {item: NETHERITE_BOOTS, enchants: {protection: 4, unbreaking: 3, feather_falling: 4, depth_strider: 3, mending: 1}}
+      - {item: NETHERITE_SWORD, enchants: {sharpness: 5, unbreaking: 3, looting: 3, fire_aspect: 2, sweeping_edge: 3, mending: 1}}
+      - {item: NETHERITE_PICKAXE, enchants: {efficiency: 5, unbreaking: 3, fortune: 3, mending: 1}}
+      - {item: NETHERITE_AXE, enchants: {efficiency: 5, sharpness: 5, unbreaking: 3, mending: 1}}
+      - {item: NETHERITE_SHOVEL, enchants: {efficiency: 5, unbreaking: 3, mending: 1}}
+      - {item: SHIELD, enchants: {unbreaking: 3, mending: 1}}
+      - {item: BOW, enchants: {power: 5, punch: 2, flame: 1, infinity: 1, unbreaking: 3}}
+      - {item: ARROW, amount: 64}
+      - {item: ENCHANTED_GOLDEN_APPLE, amount: 4}
+      - {item: TOTEM_OF_UNDYING, amount: 1}
+      - {item: ENDER_PEARL, amount: 16}
+      - {item: EXPERIENCE_BOTTLE, amount: 64}
+      - {item: COOKED_BEEF, amount: 64}
+  warden:
+    name: "<#60A5FA>Warden Kit"
+    role: "Warden"
+    icon: NETHERITE_HELMET
+    slot: 15
+    cooldown: 3d
+    items:
+      - {item: NETHERITE_HELMET, enchants: {protection: 4, unbreaking: 3, respiration: 3, aqua_affinity: 1, thorns: 3, mending: 1}}
+      - {item: NETHERITE_CHESTPLATE, enchants: {protection: 4, unbreaking: 3, thorns: 3, mending: 1}}
+      - {item: NETHERITE_LEGGINGS, enchants: {protection: 4, unbreaking: 3, swift_sneak: 3, thorns: 3, mending: 1}}
+      - {item: NETHERITE_BOOTS, enchants: {protection: 4, unbreaking: 3, feather_falling: 4, depth_strider: 3, thorns: 3, mending: 1}}
+      - {item: NETHERITE_SWORD, enchants: {sharpness: 5, unbreaking: 3, looting: 3, fire_aspect: 2, sweeping_edge: 3, knockback: 2, mending: 1}}
+      - {item: NETHERITE_PICKAXE, enchants: {efficiency: 5, unbreaking: 3, fortune: 3, mending: 1}}
+      - {item: NETHERITE_AXE, enchants: {efficiency: 5, sharpness: 5, unbreaking: 3, fortune: 3, mending: 1}}
+      - {item: NETHERITE_SHOVEL, enchants: {efficiency: 5, unbreaking: 3, fortune: 3, mending: 1}}
+      - {item: NETHERITE_HOE, enchants: {efficiency: 5, unbreaking: 3, fortune: 3, mending: 1}}
+      - {item: SHIELD, enchants: {unbreaking: 3, mending: 1}}
+      - {item: BOW, enchants: {power: 5, punch: 2, flame: 1, infinity: 1, unbreaking: 3}}
+      - {item: CROSSBOW, enchants: {quick_charge: 3, piercing: 4, unbreaking: 3, mending: 1}}
+      - {item: ARROW, amount: 64}
+      - {item: ENCHANTED_GOLDEN_APPLE, amount: 8}
+      - {item: TOTEM_OF_UNDYING, amount: 2}
+      - {item: ENDER_PEARL, amount: 16}
+      - {item: EXPERIENCE_BOTTLE, amount: 64}
+      - {item: EXPERIENCE_BOTTLE, amount: 64}
+      - {item: COOKED_BEEF, amount: 64}

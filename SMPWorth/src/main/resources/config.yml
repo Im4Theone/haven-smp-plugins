@@ -1,0 +1,96 @@
+config-version: 2
+# SMP-Worth configuration. Apply changes with "/worth reload" (an invalid file is rejected and the old settings stay).
+#
+# Every item gets a lore line "Worth: <price>" from the price sheet plugins/SMP-Worth/prices.json (a copy of
+# donutsmp_custom_prices.json is created on the first start; edit it, or replace it with an updated sheet, then /worth reload).
+# worth = base_value + sum(bonus_per_level * level) over the item's enchantments (an enchanted book uses its stored enchantments).
+# Items the sheet does not list, or lists as 0, show "Worth: 0" unless hide-zero is true.
+
+# /sell: players get this percent of an item's Worth (the price the shop sells it at). 85 means selling pays 15 percent less than buying costs.
+# Items that carry a mark of one of these plugins (the Amethyst Drill, stash bait, spawners, ...) can never be sold.
+sell:
+  enabled: true
+  percent: 85
+  protected-namespaces: [smpdrill, smpcatch, ispawners, smpspawners, smpcrates, smpkits]
+
+lore:
+  # MiniMessage. <price> is the number with thousands separators, up to two decimals (1,250  |  1.5  |  0.6).
+  format: "<#9CA3AF>Worth: <#FBBF24><price>"
+  # true = no line at all on items worth 0 or missing from the sheet.
+  hide-zero: false
+
+# How often the items in players' inventories are brought up to date (20 ticks = 1 second). Containers (chests, barrels, shulker
+# boxes...) are updated when they are opened and closed, items on the ground when they are picked up.
+scan-ticks: 10
+# Players in creative mode are left alone (their client creates the items).
+skip-creative: true
+
+# Items the sheet does not list (new items, copper gear, shelves, sherds...) get their price from these rules, tried in order; the
+# first rule whose pattern matches the WHOLE item id wins. A rule has either a fixed "value" or "same-as": the id of another item
+# whose price is used ($1, $2 are the groups of the pattern). Items nothing matches show "Worth: 0" (or no line with hide-zero).
+fallbacks:
+  - {match: ".*_spawn_egg", value: 0}
+  - {match: "(?:end_portal_frame|debug_stick|light|test_block|test_instance_block|command_block_minecart)", value: 0}
+  - {match: "waxed_(.*)", same-as: "$1"}
+  - {match: "(?:exposed|weathered|oxidized)_(.*)", same-as: "$1"}
+  - {match: "copper_(?:sword|pickaxe|axe|shovel|hoe)", value: 120}
+  - {match: "(.*)_spear", same-as: "$1_sword"}
+  - {match: "copper_(?:helmet|chestplate|leggings|boots)", value: 140}
+  - {match: "copper_horse_armor", value: 120}
+  - {match: "leather_horse_armor", same-as: "horse_armor_leather"}
+  - {match: "netherite_horse_armor", value: 3000}
+  - {match: "(.*)_nautilus_armor", same-as: "$1_horse_armor"}
+  - {match: "copper_(?:bars|chain|lantern|torch)", value: 40}
+  - {match: "iron_chain", same-as: "chain"}
+  - {match: "copper_golem_statue", value: 120}
+  - {match: "totem_of_undying", value: 12500}
+  - {match: "bundle", value: 60}
+  - {match: "coal_ore", value: 80}
+  - {match: "raw_(?:copper|gold|iron)_block", value: 630}
+  - {match: "(?:dirt_path|farmland)", value: 15}
+  - {match: "packed_ice", value: 20}
+  - {match: "fire_charge", value: 50}
+  - {match: "redstone_torch", value: 40}
+  - {match: "heavy_weighted_pressure_plate", value: 20}
+  - {match: "dried_ghast", value: 80}
+  - {match: "resin_brick", value: 80}
+  - {match: "(?:closed|open)_eyeblossom", value: 80}
+  - {match: "(?:bush|firefly_bush|leaf_litter|wildflowers|short_dry_grass|tall_dry_grass|mushroom_stem|nether_sprouts|cactus_flower)", value: 20}
+  - {match: "(?:bordure_indented|field_masoned)_banner_pattern", value: 200}
+  - {match: "(?:shaper|wayfinder)_armor_trim_smithing_template", value: 450}
+  - {match: "bamboo_mosaic", value: 20}
+  - {match: "bamboo_raft", same-as: "bamboo_boat"}
+  - {match: "bamboo_chest_raft", same-as: "bamboo_chest_boat"}
+  - {match: ".*_pottery_sherd", same-as: "explorer_pottery_sherd"}
+  - {match: ".*_shelf", value: 40}
+  - {match: ".*_harness", value: 80}
+  - {match: ".*_egg", same-as: "egg"}
+  - {match: ".*_slab", value: 14}
+  - {match: ".*_stairs", value: 28}
+  - {match: ".*_wall", value: 24}
+  - {match: "stripped_.*_(?:wood|hyphae)", value: 22}
+  - {match: ".*_pressure_plate", value: 10}
+  - {match: ".*_button", value: 5}
+  - {match: "(?:chiseled|infested)_.*", value: 20}
+  - {match: "dead_.*_coral_(?:block|fan)", value: 20}
+  - {match: "(?:smooth|polished|cracked)_.*", value: 15}
+
+messages:
+  hand: "<#9CA3AF><item><white>: <#FBBF24><price> <#9CA3AF>each, <#FBBF24><total> <#9CA3AF>for <amount>"
+  item: "<#9CA3AF><item><white>: <#FBBF24><price>"
+  empty-hand: "<#F87171>Hold an item first, or use /worth <item>."
+  usage: "<#F87171>Usage: /worth [hand | <item>]"
+  not-player: "<#F87171>Only players can hold items. Use /worth <item>."
+  no-permission: "<#F87171>You don't have permission to do that."
+  reloaded: "<#4ADE80>SMP-Worth reloaded: <count> priced items."
+  reload-rejected: "<#F87171>The config or the price sheet is invalid, the old settings stay. See the console."
+  missing: "<#FBBF24><count> items have no price in the sheet:"
+  sell-title: "<#FBBF24>Sell items"
+  sold: "<white>You sold <#00d271><amount> item(s)</#00d271> for <#00fc00><price></#00fc00>."
+  sell-nothing: "<red>There is nothing to sell in the menu."
+  sell-empty-hand: "<red>Hold the item you want to sell, or use /sell to open the menu."
+  sell-unsellable: "<red>That item can't be sold."
+  sell-failed: "<red>The payment did not go through, so you kept your items."
+  sell-unsure: "<red>The payment could not be confirmed. Check your balance and tell an admin if money is missing."
+  sell-disabled: "<red>Selling is switched off."
+  sell-usage: "<red>Usage: /sell (menu) or /sell hand"

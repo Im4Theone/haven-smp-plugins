@@ -1,0 +1,135 @@
+# Run these in the console (or in game as op) AFTER "lp import haven". They add the new plugins to your ranks.
+# Safe to run more than once, and safe to run on a server that already ran an older version of this file (the last block cleans up).
+#
+# RULE: every staff command (ban, banlist, kick, mute, warn, history, trap, v, freeze, kitadmin, eco, smpcore, protect, drill, spawners,
+# ordersadmin, keyall, setspawn, havenbuild, ...) belongs to GUARDIAN (admin) ONLY. Founder inherits Guardian. Nobody else gets those
+# permissions, so nobody else sees those commands (they are hidden from the command list and from tab-complete).
+# Everybody sees /kit, /shop, /ah, /order, /crates, /rtp, /home, /spawn, /hub, /tpa, /back, /worth, /balance, /pay, /shards.
+
+# ---- Homes: Wanderer 1 (default), Settler 2, Keeper 3, Beacon 5, Lookout 7, Warden 10, Guardian unlimited ------------------------
+lp group settler permission set smptravel.homes.2 true
+lp group keeper permission set smptravel.homes.3 true
+lp group beacon permission set smptravel.homes.5 true
+lp group lookout permission set smptravel.homes.7 true
+lp group warden permission set smptravel.homes.10 true
+lp group guardian permission set smptravel.homes.unlimited true
+
+# ---- Auction house listing limits (everybody sees /ah) ---------------------------------------------------------------------------
+lp group settler permission set smpauction.limit.10 true
+lp group keeper permission set smpauction.limit.25 true
+lp group beacon permission set smpauction.limit.50 true
+
+# ---- Kits: one kit per rank. Everybody sees /kit; Guardian (admin) gets none, the Founder plays and gets them all ----
+# Ranks inherit the kits of the ranks below them (a Beacon can claim Wanderer + Settler + Keeper + Beacon).
+# Wanderer = every player without a rank (the default group). All ranks inherit it.
+lp group default permission set smpkits.kit.wanderer true
+lp group settler permission set smpkits.kit.settler true
+lp group keeper permission set smpkits.kit.keeper true
+lp group beacon permission set smpkits.kit.beacon true
+lp group lookout permission set smpkits.kit.lookout true
+lp group warden permission set smpkits.kit.warden true
+# Guardian (admin): no kits (a node on the group itself beats what it inherits).
+lp group guardian permission set smpkits.kit.wanderer false
+lp group guardian permission set smpkits.kit.settler false
+lp group guardian permission set smpkits.kit.keeper false
+lp group guardian permission set smpkits.kit.beacon false
+lp group guardian permission set smpkits.kit.lookout false
+lp group guardian permission set smpkits.kit.warden false
+# Founder plays too: the kits are switched back on for the Founder (the group's own nodes beat the false ones inherited from Guardian).
+lp group founder permission set smpkits.kit.wanderer true
+lp group founder permission set smpkits.kit.settler true
+lp group founder permission set smpkits.kit.keeper true
+lp group founder permission set smpkits.kit.beacon true
+lp group founder permission set smpkits.kit.lookout true
+lp group founder permission set smpkits.kit.warden true
+# (SMP-Kits also checks the main rank itself, so Guardian is refused even if a node slips through.)
+
+# ---- Staff commands: GUARDIAN only (Founder inherits) ----------------------------------------------------------------------------
+# Punishments: /ban /tempban /ipban /unban /kick /mute /unmute /warn /history /punishment /banlist /alts /punish
+lp group guardian permission set smppunish.ban true
+lp group guardian permission set smppunish.unban true
+lp group guardian permission set smppunish.kick true
+lp group guardian permission set smppunish.mute true
+lp group guardian permission set smppunish.warn true
+lp group guardian permission set smppunish.history true
+lp group guardian permission set smppunish.notify true
+lp group guardian permission set smppunish.long true
+lp group guardian permission set smppunish.admin true
+lp group guardian permission set smppunish.exempt true
+# Cheater catching: /trap /v /freeze, alerts, decoy bypass
+lp group guardian permission set smpcatch.admin true
+lp group guardian permission set smpcatch.alerts true
+lp group guardian permission set smpcatch.vanish true
+lp group guardian permission set smpcatch.vanish.see true
+lp group guardian permission set smpcatch.vanish.others true
+lp group guardian permission set smpcatch.freeze true
+lp group guardian permission set smpcatch.bypass true
+# Everything else
+lp group guardian permission set smpkits.admin true
+lp group guardian permission set smpinfo.admin true
+lp group guardian permission set smpauth.admin true
+lp group guardian permission unset smpsocial.spy
+lp group guardian permission set smpsocial.unignorable true
+lp group guardian permission set smporders.admin true
+lp group guardian permission set smpshop.admin true
+lp group guardian permission set smpspawners.admin true
+lp group guardian permission set smpauction.admin true
+lp group guardian permission set smptravel.admin true
+lp group guardian permission set smprtp.admin true
+lp group guardian permission set smpprotect.admin true
+lp group guardian permission set smpprotect.bypass true
+lp group guardian permission set havenbuilder.build true
+lp group guardian permission set smpcrates.admin true
+lp group guardian permission set smpdrill.admin true
+lp group guardian permission set smpworth.admin true
+lp group guardian permission set smpcore.admin true
+lp group guardian permission set smpcore.info true
+lp group guardian permission set smpeconomy.admin true
+lp group guardian permission set smpscoreboard.admin true
+# /keyall <crate> [amount] gives everybody online a crate. Nobody has it by default, not even operators or the founder group's
+# wildcard unless that wildcard is set to true. Give it to YOURSELF only (replace YourName):
+#   lp user YourName permission set smpcrates.keyall true
+# Second lock (optional): put your name in SMP-Crates config.yml under keyall.allowed-players.
+
+# ---- Clean up: take every staff permission away from the lower ranks (needed if you ran an older version of this file) ------------
+lp group lookout permission unset smppunish.kick
+lp group lookout permission unset smppunish.mute
+lp group lookout permission unset smppunish.warn
+lp group lookout permission unset smppunish.history
+lp group lookout permission unset smppunish.notify
+lp group warden permission unset smppunish.ban
+lp group warden permission unset smppunish.unban
+lp group warden permission unset smpcatch.alerts
+lp group warden permission unset smpcatch.vanish
+lp group warden permission unset smpcatch.vanish.see
+lp group warden permission unset smpcatch.freeze
+lp group warden permission unset smptravel.admin
+lp group warden permission unset smpauction.admin
+# /kit is for everybody now (no permission needed), so remove the old rank-only switch:
+lp group settler permission unset smpkits.use
+lp group guardian permission unset smpkits.use
+lp group founder permission unset smpkits.use
+# Nodes of the plugins that were replaced (harmless, but tidy):
+lp group settler permission unset donutauction.limit.10
+lp group keeper permission unset donutauction.limit.25
+lp group keeper permission unset donutauction.slots.25
+lp group beacon permission unset donutauction.limit.50
+lp group beacon permission unset donutauction.slots.50
+lp group warden permission unset donutauction.admin
+lp group guardian permission unset donutauction.admin
+lp group guardian permission unset donutshop.admin
+lp group guardian permission unset orders.admin
+lp group guardian permission unset ispawners.admin
+lp group warden permission unset smpmarket.admin.inspect
+lp group warden permission unset smpmarket.admin.cancel
+lp group guardian permission unset smpmarket.admin
+
+# ---- Hide plugin information from ordinary players ----------------------------------------------------------------------------
+lp group default permission set bukkit.command.plugins false
+lp group default permission set bukkit.command.version false
+lp group default permission set bukkit.command.about false
+lp group default permission set bukkit.command.help false
+
+# ---- Optional: keep the end closed for newcomers ------------------------------------------------------------------------------
+#   lp group default permission set smprtp.world.end false
+#   lp group settler permission set smprtp.world.end true

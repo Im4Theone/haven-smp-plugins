@@ -1,0 +1,88 @@
+# SMP-Catch: honeypots for x-ray cheaters, staff vanish and freeze.
+# Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 1
+
+alerts:
+  # Also print alerts to the console and append them to plugins/SMP-Catch/alerts.log
+  console: true
+  log-file: true
+  # The same alert for the same player and decoy is not repeated within this many seconds.
+  cooldown-seconds: 2
+
+# Violation points. They fade by decay-per-hour. Points only count when someone reaches a decoy that nothing could have shown them.
+points:
+  decay-per-hour: 0.5
+  # A fake ore mined while it was still completely inside rock (nothing next to it was open). Honest miners see ore only when
+  # a cave or their own tunnel shows it, and that counts as visible.
+  vein-hidden: 1.0
+  vein-visible: 0.0
+  stash-open: 3.0
+  stash-break: 5.0
+  # Taking items out of a stash chest.
+  bait-taken: 3.0
+  # The mining statistics below raised an alert.
+  xray-stats: 4.0
+
+# What happens when a player's points reach a level for the first time (until you clear them with /trap clear <player>).
+# commands run as the console; %player% is the player's name. Leave commands empty to only alert.
+thresholds:
+  - points: 6
+    commands: []
+  - points: 12
+    commands: []
+    # Examples: ["freeze %player%", "tempban %player% 1d x-ray"]
+
+# Mining statistics: raises an alert when too many of the rock and ore blocks a player breaks are rare ores that were hidden.
+stats:
+  enabled: true
+  window: 300
+  min-samples: 150
+  # Percent of the last blocks that were hidden rare ores. Natural luck rarely goes above 1-2 percent.
+  hidden-rare-percent: 4.0
+  rare: [DIAMOND_ORE, DEEPSLATE_DIAMOND_ORE, ANCIENT_DEBRIS, EMERALD_ORE, DEEPSLATE_EMERALD_ORE]
+  bulk: [STONE, DEEPSLATE, TUFF, ANDESITE, DIORITE, GRANITE, NETHERRACK, BASALT, BLACKSTONE, DIRT, GRAVEL]
+
+# Rock that decoys may replace. Decoys are only ever placed in rock that is rock on every side (no cave can show them).
+hosts: [STONE, DEEPSLATE, TUFF, ANDESITE, DIORITE, GRANITE, NETHERRACK, BASALT, BLACKSTONE]
+
+# Fake ore gives the normal drops, so honest players who find one by luck lose nothing and cheaters notice nothing.
+veins:
+  drops: true
+
+# Items in stash chests. They carry an invisible mark so /trap bait <player> can find them later.
+stash:
+  loot:
+    - {item: DIAMOND, min: 2, max: 9, chance: 90}
+    - {item: DIAMOND_BLOCK, min: 1, max: 2, chance: 30}
+    - {item: NETHERITE_SCRAP, min: 1, max: 4, chance: 40}
+    - {item: GOLD_INGOT, min: 4, max: 16, chance: 70}
+    - {item: EMERALD, min: 2, max: 10, chance: 50}
+    - {item: ENCHANTED_GOLDEN_APPLE, min: 1, max: 1, chance: 15}
+
+# Decoys made automatically in newly generated chunks (off by default; use /trap vein and /trap stash to place them by hand).
+auto-seed:
+  enabled: false
+  worlds: [world, world_nether]
+  # Chance per new chunk, percent.
+  chance-percent: 6
+  types: [diamond, debris]
+
+vanish:
+  # Staff stay vanished after a restart or when they reconnect.
+  persist: true
+  # Tell everybody the staff member "left" or "joined" when they vanish or appear, and hide real joins and quits while vanished.
+  fake-messages: true
+  # Vanished staff take no damage, cannot be targeted by mobs, pick nothing up and trigger no pressure plates.
+  safe: true
+
+messages:
+  alert: "<red><bold>CATCH</bold> <white><player></white> <gray>-</gray> <what> <gray>[<points> points]</gray>"
+  alert-location: "<gray>at <world> <x> <y> <z></gray>"
+  vanish-on: "<green>You are vanished. Nobody without permission can see you or find you in the tab list."
+  vanish-off: "<yellow>You are visible again."
+  vanish-bar: "<gray>VANISHED"
+  frozen: "<red>You have been frozen by staff. Do not log out; wait for instructions."
+  unfrozen: "<green>You are no longer frozen."
+  alerts-on: "<green>Alerts are on."
+  alerts-off: "<yellow>Alerts are off."

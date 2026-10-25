@@ -1,0 +1,15 @@
+# build output, local server copies, downloaded jars
+.gradle/
+build/
+run/
+out/
+*.log
+.idea/
+*.iml
+node_modules/
+libs/*.jar
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+# test servers and local secrets
+server/
+*.env

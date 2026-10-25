@@ -1,0 +1,12 @@
+# SMP-Protect configuration. Regions themselves live in regions.yml (edited with /protect, applied with /protect reload).
+
+# Item of the selection wand (/protect wand).
+wand-material: BLAZE_ROD
+
+messages:
+  # Shown above the hotbar when something is denied. Tags: <region> <flag>. MiniMessage format.
+  denied: "<red>You can't do that here."
+  # The least time between two such messages to the same player.
+  cooldown-ms: 1500
+  # How a region's greeting/farewell (/protect greeting <region> <text>) is shown: actionbar, title or chat.
+  greeting-display: actionbar

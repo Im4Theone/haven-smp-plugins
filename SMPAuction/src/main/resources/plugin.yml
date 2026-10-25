@@ -1,0 +1,31 @@
+name: SMP-Auction
+version: '${version}'
+main: net.kaloyan.smpauction.SMPAuctionPlugin
+api-version: '1.21.11'
+description: Auction house with Buy It Now, bidding, a collection box and history.
+authors: [Kaloyan]
+depend: [Vault, SMP-VaultBridge]
+commands:
+  ah:
+    description: Open the auction house.
+    aliases: [auction, auctionhouse]
+    usage: /<command> [sell <price> [auction] | auction <price> | mine | collect | history | search text]
+permissions:
+  smpauction.admin:
+    description: Reload the configuration and cancel other players' listings.
+    default: op
+  smpauction.limit.10:
+    description: Up to 10 live listings.
+    default: false
+  smpauction.limit.25:
+    description: Up to 25 live listings.
+    default: false
+  smpauction.limit.50:
+    description: Up to 50 live listings.
+    default: false
+  smpauction.limit.100:
+    description: Up to 100 live listings.
+    default: false
+  smpauction.limit.unlimited:
+    description: Unlimited live listings.
+    default: false

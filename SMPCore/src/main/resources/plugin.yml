@@ -1,0 +1,19 @@
+name: SMP-Core
+version: '${version}'
+main: net.kaloyan.smpcore.SMPCore
+api-version: '1.21.11'
+description: Foundation plugin for the SMP - shared API, service registry and configuration.
+authors: [Kaloyan]
+
+# Commands are registered through Paper's Brigadier lifecycle API (see SmpCoreCommand),
+# so there is intentionally no "commands:" section here.
+
+permissions:
+  smpcore.info:
+    description: Access to SMP-Core diagnostic information (/smpcore info).
+    default: op
+  smpcore.admin:
+    description: Access to SMP-Core administrative commands (/smpcore reload).
+    default: op
+    children:
+      smpcore.info: true

@@ -1,0 +1,29 @@
+# SMP-Social: private messages, /reply, /ignore, /trash and /afk. Private messages are never logged or shown to anybody else. Texts use MiniMessage.
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 1
+
+afk:
+  # Minutes without moving, looking around or chatting until a player is marked away. 0 = never automatically.
+  auto-minutes: 5
+  # Players who are away do not get shards and do not count as playing time.
+
+messages:
+  to: "<#5EEAD4>You <dark_gray>→</dark_gray> <white><player><dark_gray>:</dark_gray> <gray><message>"
+  from: "<#5EEAD4><player> <dark_gray>→</dark_gray> <white>You<dark_gray>:</dark_gray> <gray><message>"
+  usage-msg: "<red>Usage: /msg <player> <message>"
+  usage-reply: "<red>Usage: /reply <message>"
+  no-player: "<red><name> is not online."
+  nobody-to-reply: "<red>You have nobody to reply to."
+  self: "<red>You can't message yourself."
+  blocked: "<red>You can't message that player."
+  ignore-on: "<white>You are now ignoring <#F87171><player></#F87171>: you won't see their chat or messages."
+  ignore-off: "<white>You stopped ignoring <#4ADE80><player></#4ADE80>."
+  ignore-none: "<gray>You are not ignoring anybody."
+  ignore-list: "<white>You are ignoring: <gray><players>"
+  ignore-unknown: "<red>I don't know a player called <white><name></white>."
+  ignore-self: "<red>You can't ignore yourself."
+  ignore-staff: "<red>You can't ignore staff."
+  afk-on: "<gray><player> is now away."
+  afk-off: "<gray><player> is back."
+  afk-you-on: "<gray>You are now away. Move or chat to come back."
+  afk-you-off: "<gray>Welcome back!"

@@ -1,0 +1,27 @@
+name: SMP-Crates
+version: '${version}'
+main: net.kaloyan.smpcrates.SMPCratesPlugin
+api-version: '1.21.11'
+description: Crates - a free one for everybody every hour, crates from the shop, menu, preview and opening animation.
+authors: [Kaloyan]
+softdepend: [Vault, SMP-VaultBridge, DonutShop, SMP-Shop, SMP-Spawners, ISpawners, SMP-Drill]
+commands:
+  crates:
+    description: Open the crate menu, or manage crates (admins).
+    aliases: [crate, keys, key]
+    usage: /<command> [open|preview|balance|timer|give|take|setblock|removeblock|reload]
+  keyall:
+    permission: smpcrates.keyall
+    permission-message: You do not have permission to do that.
+    description: Give every player who is online a crate of the chosen type.
+    usage: /<command> <crate> [amount]
+permissions:
+  smpcrates.keyall:
+    description: Use /keyall. Held by nobody by default, not even operators; give it only to yourself.
+    default: false
+  smpcrates.use:
+    description: Use /crates.
+    default: true
+  smpcrates.admin:
+    description: Give and take crates, set crate blocks, reload.
+    default: op

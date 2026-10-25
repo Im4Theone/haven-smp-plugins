@@ -1,0 +1,45 @@
+name: SMP-Catch
+version: '${version}'
+main: net.kaloyan.smpcatch.SMPCatchPlugin
+api-version: '1.21.11'
+description: X-ray honeypots, mining statistics, staff vanish and freeze.
+authors: [Kaloyan]
+commands:
+  trap:
+    permission: smpcatch.admin
+    permission-message: You do not have permission to do that.
+    description: Place and manage decoys, see suspects.
+    usage: /<command> <vein | stash | list | tp | remove | removeall | suspects | stats | forgive | bait | alerts | reload>
+  v:
+    permission: smpcatch.vanish
+    permission-message: You do not have permission to do that.
+    description: Vanish (staff).
+    aliases: [vanish]
+    usage: /<command> [on | off | list | player]
+  freeze:
+    permission: smpcatch.freeze
+    permission-message: You do not have permission to do that.
+    description: Hold a suspect in place.
+    usage: /<command> <player>
+permissions:
+  smpcatch.admin:
+    description: Use /trap.
+    default: op
+  smpcatch.alerts:
+    description: Receive cheating alerts.
+    default: op
+  smpcatch.vanish:
+    description: Use /v.
+    default: op
+  smpcatch.vanish.others:
+    description: Vanish other players.
+    default: op
+  smpcatch.vanish.see:
+    description: See vanished players.
+    default: op
+  smpcatch.freeze:
+    description: Use /freeze.
+    default: op
+  smpcatch.bypass:
+    description: Does not trigger decoys or statistics (give this to staff who must go near decoys).
+    default: false

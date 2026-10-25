@@ -1,0 +1,18 @@
+name: SMP-Worth
+version: '${version}'
+main: net.kaloyan.smpworth.SMPWorthPlugin
+api-version: '1.21.11'
+description: Adds "Worth - price" to the lore of every item, from a price sheet with a value per enchantment level.
+authors: [Kaloyan]
+softdepend: [Vault, SMP-VaultBridge]
+commands:
+  sell:
+    description: Sell items for money (you get a percent of their Worth).
+    usage: /<command> [hand]
+  worth:
+    description: Shows what the item in your hand (or a named item) is worth.
+    usage: /<command> [hand|<item>|reload|missing]
+permissions:
+  smpworth.admin:
+    description: Reload the price sheet and list items without a price.
+    default: op

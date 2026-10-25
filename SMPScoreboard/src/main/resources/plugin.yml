@@ -1,0 +1,19 @@
+name: SMP-Scoreboard
+version: '${version}'
+main: net.kaloyan.smpscoreboard.SMPScoreboard
+api-version: '1.21.11'
+description: Sidebar with money, shards, kills, deaths, streak, rank, playtime and ping, plus LuckPerms chat prefixes.
+authors: [Kaloyan]
+depend: [SMP-Core, SMP-Economy]
+softdepend: [LuckPerms, SMP-Shop, DonutShop, SMP-Catch]
+
+commands:
+  scoreboard:
+    description: Show or hide your scoreboard (/scoreboard reload for admins)
+    aliases: [sb]
+    usage: /<command> [reload]
+
+permissions:
+  smpscoreboard.admin:
+    description: Reload the scoreboard configuration.
+    default: op

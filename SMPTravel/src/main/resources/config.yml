@@ -1,0 +1,87 @@
+# SMP-Travel configuration. The data (homes, spawn, hub) lives in travel.yml, written with /sethome and /setspawn.
+
+# Seconds EVERY player must stand still before any teleport (moving or taking damage cancels).
+warmup-seconds: 5
+
+# World used by /spawn and /hub until an admin runs /setspawn or /setspawn hub (then the saved spot is used).
+spawn-world: world
+hub-world: hub
+
+# New players start in the hub (if the world exists).
+first-join-hub: true
+
+# Where players come back after dying.
+#   hub     = everybody respawns in the hub, even if they have a bed
+#   bed     = a bed or respawn anchor is kept; everybody else respawns in the hub
+#   vanilla = respawning is left alone
+# The hub spot saved with /setspawn hub is used if there is one; otherwise the location below (the hub world at 0 100 0).
+# If that world is not loaded, respawning stays vanilla.
+respawn:
+  mode: hub
+  world: hub
+  x: 0.5
+  y: 100
+  z: 0.5
+  yaw: 0
+  pitch: 0
+
+# Players who fall out of the world (below min-y) in these worlds are sent back to the hub instead of dying in the void.
+# Void damage in these worlds is cancelled. Creative and spectator players are left alone when skip-creative is true.
+# The hub spot saved with /setspawn hub is used; make sure it is higher than min-y. worlds: [] means the hub-world above.
+void-rescue:
+  enabled: true
+  worlds: [hub]
+  min-y: 20
+  skip-creative: true
+  message: "<#FBBF24>You fell out of the world - back to the hub."
+
+homes:
+  # Homes without a permission. Give more with the permission smptravel.homes.<number> (1-100), e.g. smptravel.homes.5,
+  # or smptravel.homes.unlimited.
+  default: 1
+
+tpa:
+  # Seconds between two requests of one player.
+  cooldown-seconds: 10
+  # Seconds a request stays valid.
+  expire-seconds: 60
+
+messages:
+  busy: "<#F87171>You are already waiting for a teleport."
+  warmup: "<#38BDF8>Teleporting to <white><what></white> in <white><seconds></white>... <#9CA3AF>stand still"
+  cancelled-move: "<#F87171>Teleport cancelled: you moved."
+  cancelled-damage: "<#F87171>Teleport cancelled: you took damage."
+  teleport-failed: "<#F87171>The teleport failed."
+  teleported: "<#4ADE80>Teleported to <white><what></white>."
+  unknown: "<#F87171>Unknown command."
+  no-permission: "<#F87171>You don't have permission to do that."
+  not-player: "<#F87171>Only players can use this command."
+  save-failed: "<#F87171>Could not save, nothing was changed: <error>"
+  spawn-missing: "<#F87171>The spawn world '<world>' is not loaded."
+  hub-missing: "<#F87171>The hub world '<world>' does not exist."
+  set-spawn: "<#4ADE80>The <white><what></white> is now where you stand."
+  bad-name: "<#F87171>Home names use a-z, 0-9, _ and -, up to 16 characters."
+  home-set: "<#4ADE80>Home <white><name></white> saved."
+  home-limit: "<#F87171>You can have <white><limit></white> home(s). Delete one with /delhome <name> or replace it with the same name."
+  home-none: "<#F87171>You have no homes. Use /sethome."
+  home-which: "<#FBBF24>Which home? <white><homes>"
+  home-unknown: "<#F87171>You have no home called <white><name></white>. Your homes: <white><homes>"
+  home-world-missing: "<#F87171>Home <white><name></white> is in the world '<world>', which is not loaded."
+  home-blocked: "<#F87171>It is blocked at <white><name></white> now (something solid is there)."
+  home-deleted: "<#4ADE80>Home <white><name></white> deleted."
+  home-list: "<#38BDF8>Homes (<white><count></white>/<white><limit></white>): <white><homes>"
+  tpa-usage: "<#F87171>Usage: /<command> <player>"
+  tpa-offline: "<#F87171><player> is not online."
+  tpa-self: "<#F87171>You can't send a request to yourself."
+  tpa-cooldown: "<#F87171>Wait <white><seconds></white> seconds before sending another request."
+  tpa-sent: "<#4ADE80>Request sent to <white><player></white>. /tpcancel cancels it."
+  tpa-received: "<#38BDF8><white><player></white> wants to teleport to you. <#4ADE80>/tpaccept <#9CA3AF>or <#F87171>/tpdeny <#9CA3AF>(<seconds> s)"
+  tpa-received-here: "<#38BDF8><white><player></white> wants you to teleport to them. <#4ADE80>/tpaccept <#9CA3AF>or <#F87171>/tpdeny <#9CA3AF>(<seconds> s)"
+  tpa-none: "<#F87171>You have no teleport request waiting."
+  tpa-none-sent: "<#F87171>You have no request to cancel."
+  tpa-accepted: "<#4ADE80><white><player></white> accepted your request."
+  tpa-accepted-you: "<#4ADE80>You accepted <white><player></white>'s request."
+  tpa-denied: "<#F87171><white><player></white> denied your request."
+  tpa-denied-you: "<#F87171>You denied <white><player></white>'s request."
+  tpa-cancelled: "<#FBBF24>Your request was cancelled."
+  back-none: "<#F87171>There is nowhere to go back to."

@@ -1,0 +1,39 @@
+name: SMP-Auth
+version: '${version}'
+main: net.kaloyan.smpauth.SMPAuthPlugin
+api-version: '1.21.11'
+description: Register and login for players without a bought account; bought accounts are verified with Mojang and walk in.
+authors: [Kaloyan]
+softdepend: [FastLogin]
+load: STARTUP
+commands:
+  register:
+    description: Create your account.
+    aliases: [reg]
+    usage: /<command> <password> <password>
+  login:
+    description: Log in.
+    aliases: [l]
+    usage: /<command> <password>
+  changepassword:
+    description: Change your password.
+    aliases: [changepass, cp]
+    usage: /<command> <old password> <new password>
+  logout:
+    description: Log out.
+    usage: /<command>
+  unregister:
+    description: Delete your account.
+    usage: /<command> <password>
+  premium:
+    description: Mark your account as a bought Minecraft account, so you skip the password.
+    usage: /<command>
+  auth:
+    description: Administration of accounts.
+    permission: smpauth.admin
+    permission-message: You do not have permission to do that.
+    usage: /<command> <unregister | setpassword | forcelogin | info | uuid | premium | cracked | reload> ...
+permissions:
+  smpauth.admin:
+    description: /auth.
+    default: op

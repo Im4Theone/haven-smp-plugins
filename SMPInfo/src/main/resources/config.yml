@@ -1,0 +1,132 @@
+# SMP-Info: join and quit messages, the server list MOTD, an announcer and info commands (/discord, /rules ...).
+# Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 2
+
+server-name: "Haven SMP"
+
+# The two lines under the server name in the multiplayer list. Leave empty to keep the one from server.properties.
+motd:
+  - "<gradient:#00F986:#5EEAD4><bold>HAVEN SMP</bold></gradient> <dark_gray>|</dark_gray> <gray>1.21.11"
+  - "<#FBBF24>Shop <dark_gray>·</dark_gray> <#FBBF24>/rtp <dark_gray>·</dark_gray> <#FBBF24>Crates <dark_gray>·</dark_gray> <#FBBF24>Orders <dark_gray>·</dark_gray> <#FBBF24>Auction"
+
+# Placeholders: <player> (name), <prefix> (the rank prefix from LuckPerms, with colours), <count> (how many players have joined so far).
+# Staff in /v vanish make no messages (SMP-Catch). Empty text = no message.
+messages:
+  join: "<dark_gray>[<green>+</green>]</dark_gray> <prefix><gray><player>"
+  quit: "<dark_gray>[<red>-</red>]</dark_gray> <prefix><gray><player>"
+  first-join: "<#FBBF24>Welcome <white><player></white> to <white><server></white>! <gray>(player #<count>)"
+
+# Chat tips sent to everybody on a timer, one after the other. Nobody online = nothing is sent.
+announcer:
+  enabled: true
+  interval-seconds: 300
+  prefix: "<#00F986><bold>HAVEN</bold> <dark_gray>»</dark_gray> "
+  messages:
+    - "<white>Buy gear with <#FBBF24>/shop</#FBBF24> and sell your loot with <#FBBF24>/sell</#FBBF24>."
+    - "<white>Looking for a deal? Browse the <#FBBF24>/ah</#FBBF24> auction house or post a buy order with <#FBBF24>/order</#FBBF24>."
+    - "<white>Everyone gets a free key every hour! Open yours with <#FBBF24>/crates</#FBBF24>."
+    - "<white>Claim your rank kit with <#FBBF24>/kit</#FBBF24> every day."
+    - "<white>Explore a new world with <#FBBF24>/rtp</#FBBF24>, or go home with <#FBBF24>/home</#FBBF24> and <#FBBF24>/spawn</#FBBF24>."
+    - "<white>Playing earns <#5EEAD4>Shards</#5EEAD4>: check <#FBBF24>/shards</#FBBF24> and spend them in <#FBBF24>/shop</#FBBF24>."
+    - "<white>Want more homes, bigger kits and perks? See the ranks with <#FBBF24>/ranks</#FBBF24>."
+    - "<white>See who is on top with <#FBBF24>/leaderboard</#FBBF24> and claim your <#FBBF24>/daily</#FBBF24> reward."
+
+# Commands that just show text. The name is the command; add as many as you like (the names are read when the server starts).
+# Lines may use <player> and <server>.
+commands:
+  discord:
+    description: "Our Discord server"
+    lines:
+      - "<#00F986><bold>DISCORD</bold>"
+      - "<white>Join us: <#5EEAD4><click:open_url:'https://discord.gg/your-invite'>discord.gg/your-invite</click>"
+  store:
+    description: "The server store"
+    lines:
+      - "<#00F986><bold>STORE</bold> <gray>(one-time purchases, no subscriptions)"
+      - "<white>Buy here: <#5EEAD4><click:open_url:'https://your-store.example'>your-store.example</click>"
+      - "<#FBBF24>Ranks <gray>(each one includes the ones below it, see <white>/ranks</white>)"
+      - "<gray>  Settler <white>€2.99<gray> · Keeper <white>€5.99<gray> · Beacon <white>€9.99<gray> · Lookout <white>€14.99<gray> · Warden <white>€24.99"
+      - "<#FBBF24>Crate keys <gray>(1 key / pack of 5)"
+      - "<gray>  Prime <white>€0.99 / €3.99<gray> · Gold <white>€1.99 / €7.99<gray> · Amethyst <white>€3.99 / €15.99<gray> · Crimson <white>€6.99 / €27.99"
+      - "<dark_gray>Everything in the store can also be earned in game."
+  vote:
+    description: "Vote for the server"
+    lines:
+      - "<#00F986><bold>VOTE</bold>"
+      - "<white>Vote for rewards: <#5EEAD4><click:open_url:'https://your-vote-page.example'>your-vote-page.example</click>"
+  rules:
+    description: "The server rules"
+    lines:
+      - "<#00F986><bold>RULES</bold>"
+      - "<#FBBF24>1.</#FBBF24> <white>No hacks, x-ray or cheating clients."
+      - "<#FBBF24>2.</#FBBF24> <white>No griefing or stealing from claimed bases."
+      - "<#FBBF24>3.</#FBBF24> <white>Be respectful: no insults, spam or advertising."
+      - "<#FBBF24>4.</#FBBF24> <white>No exploiting bugs or duplicating items."
+      - "<#FBBF24>5.</#FBBF24> <white>Staff decisions are final; appeal on our /discord."
+  commands:
+    description: "The most useful commands"
+    lines:
+      - "<#00F986><bold>COMMANDS</bold>"
+      - "<#FBBF24>/shop</#FBBF24> <gray>buy items</gray>   <#FBBF24>/sell</#FBBF24> <gray>sell items</gray>   <#FBBF24>/ah</#FBBF24> <gray>auction house</gray>"
+      - "<#FBBF24>/order</#FBBF24> <gray>buy orders</gray>   <#FBBF24>/crates</#FBBF24> <gray>your keys</gray>   <#FBBF24>/kit</#FBBF24> <gray>rank kits</gray>"
+      - "<#FBBF24>/rtp</#FBBF24> <gray>random teleport</gray>   <#FBBF24>/home</#FBBF24> <gray>homes</gray>   <#FBBF24>/spawn</#FBBF24> <gray>/hub</gray>"
+      - "<#FBBF24>/tpa</#FBBF24> <gray>ask to teleport</gray>   <#FBBF24>/pay</#FBBF24> <gray>send money</gray>   <#FBBF24>/bal</#FBBF24> <gray>your money</gray>"
+      - "<#FBBF24>/leaderboard</#FBBF24> <gray>top players</gray>   <#FBBF24>/stats</#FBBF24> <gray>your stats</gray>   <#FBBF24>/daily</#FBBF24> <gray>daily reward</gray>"
+      - "<#FBBF24>/ranks</#FBBF24> <gray>buy a rank</gray>   <#FBBF24>/store</#FBBF24> <gray>the web store</gray>   <#FBBF24>/discord</#FBBF24> <gray>chat with us</gray>"
+
+# The /ranks menu. Ranks are sold on your web store: after payment the store must run a console command such as
+#   lp user {name} parent set <rank>        (Tebex: put it in the package's commands)
+# Crate keys are delivered with:  crates give {name} <prime|gold|amethyst|crimson> <amount>
+# Put your real store address in store-url. Key = the LuckPerms group; list the cheapest first (at most 7).
+# Players who already have a rank (or a higher one) see it marked instead of a price.
+ranks:
+  store-url: "https://your-store.example"
+  title: "<#00F986><bold>ʀᴀɴᴋs"
+  owned: "<green>✔ You have this rank"
+  price-line: "<gray>Price: <#FBBF24><price>"
+  click-line: "<yellow>Click to open the store"
+  store-name: "<#00F986><bold>Open the store"
+  store-lore: "<gray>Ranks, keys and more for <white><server></white>"
+  link-message: "<#00F986><bold>STORE</bold> <white>Buy your rank here: <#5EEAD4><link> <gray>(you get it right after paying)"
+  list:
+    settler:
+      name: "<#9CA3AF><bold>SETTLER"
+      item: IRON_INGOT
+      price: "€2.99"
+      perks:
+        - "<gray>• <white>2 homes"
+        - "<gray>• <white>10 auction listings"
+        - "<gray>• <white>Settler kit (<#FBBF24>/kit</#FBBF24>)"
+    keeper:
+      name: "<#34D399><bold>KEEPER"
+      item: GOLD_INGOT
+      price: "€5.99"
+      perks:
+        - "<gray>• <white>3 homes"
+        - "<gray>• <white>25 auction listings"
+        - "<gray>• <white>Keeper kit + everything below"
+    beacon:
+      name: "<#5EEAD4><bold>BEACON"
+      item: DIAMOND
+      price: "€9.99"
+      perks:
+        - "<gray>• <white>5 homes"
+        - "<gray>• <white>50 auction listings"
+        - "<gray>• <white>Beacon kit + everything below"
+    lookout:
+      name: "<#A78BFA><bold>LOOKOUT"
+      item: EMERALD
+      price: "€14.99"
+      perks:
+        - "<gray>• <white>7 homes"
+        - "<gray>• <white>Lookout kit with netherite"
+        - "<gray>• <white>everything below"
+    warden:
+      name: "<#F87171><bold>WARDEN"
+      item: NETHERITE_INGOT
+      price: "€24.99"
+      perks:
+        - "<gray>• <white>10 homes"
+        - "<gray>• <white>Warden kit with netherite"
+        - "<gray>• <white>everything below"

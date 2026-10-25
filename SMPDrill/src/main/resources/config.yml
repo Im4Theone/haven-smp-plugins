@@ -1,0 +1,42 @@
+# SMP-Drill configuration. Apply changes with "/drill reload" (an invalid file is rejected and the old settings stay).
+#
+# The Amethyst Drill is a netherite pickaxe. Every block mined with it breaks the whole wall around it, so walking forward
+# digs a tunnel. Every extra block goes through a normal block-break check first, so SMP-Protect and other plugins still
+# decide what may be broken. Chests, signs, spawners and other blocks with data, liquids and unbreakable blocks are never touched.
+
+tunnel:
+  # Width and height of the tunnel: an odd number, 3 to 9. 5 = a 5x5 tunnel.
+  size: 5
+  # Layers broken per swing (1 = just the wall in front of you).
+  depth: 1
+  # Sneak while mining to break only one block, like a normal pickaxe.
+  sneak-mines-one: true
+  # Durability lost for every extra block (0 = none, only the first block wears the pickaxe as usual).
+  wear-per-extra-block: 0
+
+item:
+  name: "<#F472B6><bold>Amethyst Drill"
+  lore:
+    - "<#9CA3AF>Mines a 5x5 tunnel with every swing."
+    - "<#9CA3AF>Sneak to mine a single block."
+  unbreakable: false
+  # Maxed out. Names are the Minecraft enchantment names.
+  enchantments:
+    efficiency: 5
+    unbreaking: 3
+    fortune: 3
+    mending: 1
+
+# Worlds where the drill mines one block at a time.
+disabled-worlds: []
+
+messages:
+  info: "<#F472B6>Amethyst Drill<#9CA3AF>: mines a <white><size>x<size> <#9CA3AF>tunnel (<depth> deep). Sneak to mine one block."
+  usage: "<#F87171>Usage: /drill [info | give <player> [amount] | reload]"
+  no-permission: "<#F87171>You don't have permission to do that."
+  not-online: "<#F87171><player> is not online."
+  bad-amount: "<#F87171>The amount must be a number from 1 to 36."
+  gave: "<#4ADE80>Gave <count> Amethyst Drill(s) to <player>."
+  received: "<#F472B6>You received <count> Amethyst Drill(s)!"
+  reloaded: "<#4ADE80>SMP-Drill reloaded."
+  reload-rejected: "<#F87171>The config is invalid, the old settings stay. See the console."

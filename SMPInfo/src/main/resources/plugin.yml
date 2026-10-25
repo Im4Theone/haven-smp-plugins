@@ -1,0 +1,21 @@
+name: SMP-Info
+version: '${version}'
+main: net.kaloyan.smpinfo.SMPInfoPlugin
+api-version: '1.21.11'
+description: Join and quit messages, server list text, announcer and info commands.
+authors: [Kaloyan]
+softdepend: [Vault, LuckPerms]
+commands:
+  ranks:
+    description: See the ranks and how to buy them.
+    aliases: [rank, buyrank]
+    usage: /<command>
+  smpinfo:
+    description: Reload or test SMP-Info.
+    permission: smpinfo.admin
+    permission-message: You do not have permission to do that.
+    usage: /<command> <reload | announce>
+permissions:
+  smpinfo.admin:
+    description: /smpinfo.
+    default: op

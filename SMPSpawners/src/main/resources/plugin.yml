@@ -1,0 +1,22 @@
+name: SMP-Spawners
+version: '${version}'
+main: net.kaloyan.smpspawners.SMPSpawnersPlugin
+api-version: '1.21.11'
+description: Stackable spawners that store loot and experience, with a menu to collect and sell.
+authors: [Kaloyan]
+depend: [Vault, SMP-VaultBridge]
+loadbefore: [SMP-Crates, DonutShop, SMP-Shop]
+commands:
+  spawners:
+    permission: smpspawners.admin
+    permission-message: You do not have permission to do that.
+    description: Spawner information and administration.
+    aliases: [ispawners, isp]
+    usage: /<command> [info | give <player> <creature> [amount] | givespawner <creature> [amount] | setstacksize <n> | reload]
+permissions:
+  smpspawners.admin:
+    description: Give spawners, set stack sizes, reload the configuration.
+    default: op
+  ispawners.admin:
+    description: Same as smpspawners.admin (the permission of the old ISpawners).
+    default: op

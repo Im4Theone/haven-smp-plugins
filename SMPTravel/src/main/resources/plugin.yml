@@ -1,0 +1,51 @@
+name: SMP-Travel
+version: '${version}'
+main: net.kaloyan.smptravel.SMPTravelPlugin
+api-version: '1.21.11'
+description: Spawn and hub, homes, teleport requests and /back, with a stand-still warm-up.
+authors: [Kaloyan]
+commands:
+  spawn:
+    description: Teleport to the survival spawn.
+  hub:
+    description: Teleport to the hub.
+  setspawn:
+    permission: smptravel.admin
+    permission-message: You do not have permission to do that.
+    description: Set the spawn (or the hub with /setspawn hub) to where you stand.
+    usage: /<command> [spawn|hub]
+  sethome:
+    description: Save a home where you stand.
+    usage: /<command> [name]
+  home:
+    description: Teleport to one of your homes.
+    usage: /<command> [name]
+  homes:
+    description: List your homes.
+  delhome:
+    description: Delete one of your homes.
+    usage: /<command> <name>
+  tpa:
+    description: Ask to teleport to a player.
+    usage: /<command> <player>
+  tpahere:
+    description: Ask a player to teleport to you.
+    usage: /<command> <player>
+  tpaccept:
+    description: Accept the teleport request waiting for you.
+  tpdeny:
+    description: Deny the teleport request waiting for you.
+  tpcancel:
+    description: Cancel the teleport request you sent.
+  back:
+    description: Go back to where you were before your last teleport or death.
+permissions:
+  smptravel.admin:
+    description: /setspawn.
+    default: op
+  smptravel.back:
+    description: Use /back.
+    default: true
+  smptravel.homes.unlimited:
+    description: No home limit.
+    default: op

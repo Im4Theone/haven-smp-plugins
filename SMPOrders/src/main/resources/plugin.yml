@@ -1,0 +1,21 @@
+name: SMP-Orders
+version: '${version}'
+main: net.kaloyan.smporders.SMPOrdersPlugin
+api-version: '1.21.11'
+description: A buy-order marketplace with escrow.
+authors: [Kaloyan]
+depend: [Vault, SMP-VaultBridge]
+commands:
+  order:
+    description: Open the orders marketplace (optionally searching for an item).
+    aliases: [orders]
+    usage: /<command> [item]
+  ordersadmin:
+    permission: smporders.admin
+    permission-message: You do not have permission to do that.
+    description: Orders administration.
+    usage: /<command> <reload | info | cancel <order number>>
+permissions:
+  smporders.admin:
+    description: Reload the configuration and cancel other players' orders.
+    default: op

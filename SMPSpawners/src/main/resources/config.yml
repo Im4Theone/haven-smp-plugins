@@ -1,0 +1,104 @@
+config-version: 2
+# SMP-Spawners configuration (apply changes with /spawners reload; an invalid file is rejected and the old one kept).
+# The spawners and prices sections use the same keys as the old ISpawners config.
+
+# Ticks between production rounds (20 ticks = 1 second). A spawner only produces while a player is within activation_range blocks.
+refresh_time: 80
+activation_range: 16
+
+# How many items one spawner stores before it is full and stops producing.
+max_items: 10000
+# The capacity is max_items * max_items_multiplier * (number of stacked spawners).
+max_items_multiplier: 1.5
+# Most spawners that can be stacked in one block.
+max_stacked_spawners: 500
+
+# Breaking a spawner needs a pickaxe with silk touch. It takes one spawner out of the stack (sneak: up to sneak_break_batch) and gives
+# it as an item; taking out the last one also hands over the loot and experience stored in it.
+require_silk_touch: true
+sneak_break_batch: 64
+# Explosions and pistons leave stacked spawners alone.
+protect_spawners: true
+
+# Per creature: experience added per round (per stacked spawner) and what it can drop.
+# Each round, every stacked spawner picks ONE drop by weight, then rolls an amount between min and max (min 0 means the
+# pick can come up empty). The percentages on the spawner item's description are weight / total weight.
+# A drop can also be just an item name (BONE): exactly 1, weight 1.
+spawners:
+  CREEPER:
+    exp: 2
+    loot:
+      - { item: GUNPOWDER, min: 0, max: 2, weight: 1 }
+  SKELETON:
+    exp: 2
+    loot:
+      - { item: BONE, min: 0, max: 2, weight: 1 }
+      - { item: ARROW, min: 0, max: 2, weight: 1 }
+  ZOMBIE:
+    exp: 2
+    loot:
+      - { item: ROTTEN_FLESH, min: 0, max: 2, weight: 1 }
+  BLAZE:
+    exp: 2
+    loot:
+      - { item: BLAZE_ROD, min: 0, max: 1, weight: 1 }
+  SPIDER:
+    exp: 5
+    loot:
+      - { item: SPIDER_EYE, min: 0, max: 1, weight: 1 }
+      - { item: STRING, min: 0, max: 2, weight: 2 }
+  PIG:
+    exp: 2
+    loot:
+      - { item: PORKCHOP, min: 1, max: 3, weight: 1 }
+  COW:
+    exp: 2
+    loot:
+      - { item: LEATHER, min: 0, max: 2, weight: 1 }
+      - { item: BEEF, min: 1, max: 3, weight: 1 }
+  IRON_GOLEM:
+    exp: 2
+    loot:
+      - { item: POPPY, min: 0, max: 2, weight: 1 }
+      - { item: IRON_INGOT, min: 3, max: 5, weight: 1 }
+
+# What one item sells for. Decimals are fine (2.5, at most 2 decimals). Items without a price are not sold (they stay in the spawner).
+prices:
+  GUNPOWDER: 42.5
+  BONE: 17
+  ARROW: 102
+  ROTTEN_FLESH: 21.25
+  BLAZE_ROD: 34
+  STRING: 17
+  SPIDER_EYE: 21.25
+  PORKCHOP: 21.25
+  LEATHER: 17
+  BEEF: 21.25
+  POPPY: 17
+  IRON_INGOT: 102
+
+messages:
+  info: "<#38BDF8>SMP-Spawners<#9CA3AF>: <white><count> <#9CA3AF>stacked spawners. Creatures: <white><kinds>"
+  usage: "<#F87171>Usage: /spawners [info | give <player> <creature> [amount] | givespawner <creature> [amount] | setstacksize <n> | reload]"
+  no-permission: "<#F87171>You don't have permission to do that."
+  not-player: "<#F87171>Only players can do that."
+  not-online: "<#F87171><player> is not online."
+  unknown-kind: "<#F87171>There is no such spawner. Creatures: <kinds>"
+  bad-amount: "<#F87171>The amount must be a number from 1 to 2304."
+  gave: "<#4ADE80>Gave <count> <kind> Spawner(s) to <player>."
+  received: "<#38BDF8>You received <count> <kind> Spawner(s)."
+  look-at-spawner: "<#F87171>Look at a stacked spawner (within 6 blocks) first."
+  bad-stack: "<#F87171>The stack size must be a number from 1 to <max>."
+  stack-set: "<#4ADE80>The spawner now holds <size> stacked spawners."
+  reloaded: "<#4ADE80>SMP-Spawners reloaded."
+  reload-rejected: "<#F87171>The config is invalid, the old settings stay. See the console."
+  kind-disabled: "<#F87171>The <kind> spawner is switched off in the config."
+  save-failed: "<#F87171>The spawner data could not be saved. Nothing was changed; tell an admin."
+  no-economy: "<#F87171>The economy is not available right now. Nothing was sold."
+  nothing-to-sell: "<#F87171>There is nothing with a price to sell."
+  sold: "<#4ADE80>Sold <items> items for <money>."
+  payment-failed: "<#F87171>The payment failed, so your items were put back."
+  payment-unconfirmed: "<#FBBF24>The payment could not be confirmed. Check your balance and tell an admin before trying again."
+  no-xp: "<#F87171>There is no experience to collect."
+  xp-collected: "<#4ADE80>Collected <xp> XP."
+  inventory-full: "<#F87171>Your inventory is full."

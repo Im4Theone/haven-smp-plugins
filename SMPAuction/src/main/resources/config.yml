@@ -1,0 +1,110 @@
+# SMP-Auction. Texts use MiniMessage (https://docs.advntr.dev/minimessage/format.html).
+# Changing config-version or removing it makes the plugin replace this file with the built-in one (your copy is kept).
+config-version: 2
+
+auction:
+  # Lengths offered in the sell menu (up to 7), in hours.
+  durations: [6, 12, 24, 48, 72, 168]
+  # Length used by /ah sell. Must be one of the durations.
+  default-duration-hours: 48
+  # Price limits for a whole listing (at most 2 decimals). The 'k', 'm' and 'b' shorthands work when typing prices.
+  min-price: 10
+  max-price: 1000000000
+  # How many live listings a player can have, and permissions that raise it (0 = unlimited).
+  max-listings: 5
+  limit-permissions:
+    smpauction.limit.10: 10
+    smpauction.limit.25: 25
+    smpauction.limit.50: 50
+    smpauction.limit.100: 100
+    smpauction.limit.unlimited: 0
+
+# Auctions with bids, next to Buy It Now.
+bidding:
+  enabled: true
+  # A new bid must beat the current one by this percent or this amount, whichever is higher.
+  min-increment-percent: 5
+  min-increment: 1
+  # A bid in the final seconds extends the auction to this many seconds, so nobody wins by sniping (0 = off).
+  anti-snipe-seconds: 30
+
+economy:
+  # Taken from the seller's money when an item sells.
+  sales-tax-percent: 5
+  # Paid by the seller when listing, and not refunded.
+  listing-fee:
+    flat: 0
+    percent: 0
+    # Highest fee for one listing (0 = no cap).
+    max: 0
+
+restrictions:
+  # Worlds where players cannot list items.
+  disabled-worlds: []
+  # Game modes that cannot list items (stops creative-mode items reaching the economy).
+  blocked-gamemodes: [CREATIVE, SPECTATOR]
+
+# Items that can never be listed.
+blacklist:
+  materials:
+    - BEDROCK
+    - BARRIER
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - COMMAND_BLOCK_MINECART
+    - STRUCTURE_BLOCK
+    - STRUCTURE_VOID
+    - JIGSAW
+    - DEBUG_STICK
+    - LIGHT
+    - KNOWLEDGE_BOOK
+
+titles:
+  browse: "<#FBBF24>ᴀᴜᴄᴛɪᴏɴ ʜᴏᴜꜱᴇ (ᴘᴀɢᴇ <page>)"
+  confirm: "<#FBBF24>ᴄᴏɴꜰɪʀᴍ ᴘᴜʀᴄʜᴀꜱᴇ"
+  bid: "<#FBBF24>ᴘʟᴀᴄᴇ ᴀ ʙɪᴅ"
+  mine: "<#FBBF24>ʏᴏᴜʀ ʟɪꜱᴛɪɴɢꜱ"
+  collect: "<#FBBF24>ᴄᴏʟʟᴇᴄᴛɪᴏɴ ʙᴏx"
+  history: "<#FBBF24>ʏᴏᴜʀ ꜱᴀʟᴇꜱ ᴀɴᴅ ᴘᴜʀᴄʜᴀꜱᴇꜱ"
+  sell: "<#FBBF24>ꜱᴇʟʟ ᴀɴ ɪᴛᴇᴍ"
+
+messages:
+  listed: "<white>You listed <#00d271><item></#00d271> for <#00fc00><price></#00fc00> (<type>, <hours>h)."
+  listed-fee: "<gray>Listing fee: <fee>"
+  bought: "<white>You bought <#00d271><item></#00d271> for <#00fc00><price></#00fc00>. It is in your collection box (/ah collect)."
+  sold: "<#00fc00><buyer></#00fc00> <white>bought your <#00d271><item></#00d271> for <#00fc00><price></#00fc00> (before tax)."
+  sold-while-away: "<white>While you were away, <gold><sales></gold> of your items sold for <#00fc00><price></#00fc00> (before tax)."
+  bid-placed: "<white>You bid <#00fc00><price></#00fc00> on <#00d271><item></#00d271>."
+  outbid: "<red>You were outbid on <white><item></white> (now <price>). Your money is back."
+  bid-on-yours: "<#00fc00><bidder></#00fc00> <white>bid <#00fc00><price></#00fc00> on your <#00d271><item></#00d271>."
+  won: "<white>You won <#00d271><item></#00d271> for <#00fc00><price></#00fc00>! Collect it with /ah collect."
+  auction-sold: "<white>Your <#00d271><item></#00d271> auction ended: <#00fc00><buyer></#00fc00> won it for <#00fc00><price></#00fc00> (before tax)."
+  expired: "<yellow>Your <white><item></white> listing ended without a buyer. It is in your collection box."
+  cancelled: "<white>Listing cancelled. The item is in your collection box."
+  collected: "<white>You collected <#00d271><item></#00d271>."
+  box-waiting: "<white>You have <gold><count></gold> item(s) in your collection box. Use /ah collect."
+  collect-nothing-fit: "<red>Your inventory is full. The item stays in your collection box."
+  payout-later: "<yellow>The payment could not be made right now; you will get it shortly."
+  gone: "<red>That listing is not available any more."
+  own: "<red>You can't buy or bid on your own listing."
+  wrong-type: "<red>That is not the right kind of listing for this."
+  not-enough-money: "<red>You don't have enough money."
+  bid-too-low: "<red>Your bid must be at least <yellow><min></yellow>."
+  already-highest: "<red>You already have the highest bid."
+  has-bids: "<red>An auction with bids can't be cancelled."
+  not-owner: "<red>That listing is not yours."
+  bad-price: "<red>The price must be between <yellow><min></yellow> and <yellow><max></yellow>. Use for example 100, 2.5k, 1.5m."
+  bad-duration: "<red>That listing length is not allowed."
+  limit: "<red>You have reached your limit of <yellow><limit></yellow> live listings."
+  blocked: "<red>That item (or this place) can't be sold here."
+  bidding-off: "<red>Auctions are switched off."
+  nothing-to-sell: "<red>Hold the item you want to sell in your main hand."
+  payment-unsure: "<red>The payment could not be confirmed, so nothing happened. Check your balance and tell an admin if money is missing."
+  failed: "<red>That did not work. Nothing was changed."
+  type-price: "<green>Type the price in chat (for example 500, 2.5k, 1.5m):"
+  type-bid: "<green>Type your bid in chat (at least <min>):"
+  type-search: "<yellow>Type an item name or a seller to search for:"
+  prompt-cancel: "<gray>Type cancel to go back."
+  usage-sell: "<red>Usage: /ah sell <price> [auction]"
+  invalid-price: "<red>That is not a valid price."
